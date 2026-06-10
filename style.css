@@ -1262,3 +1262,62 @@ h1 {
     margin-top: -44px;
   }
 }
+/* MER SYNLIG BOOKING-SEKSJON */
+
+.booking {
+  width: min(1180px, calc(100% - 44px));
+  margin: 120px auto 130px;
+  padding: clamp(34px, 5vw, 68px);
+  border: 1px solid rgba(225, 140, 255, 0.26);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at top right, rgba(225, 140, 255, 0.18), transparent 24rem),
+    radial-gradient(circle at bottom left, rgba(103, 243, 162, 0.10), transparent 22rem),
+    linear-gradient(145deg, rgba(36, 25, 68, 0.96), rgba(12, 22, 48, 0.96));
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.38),
+    0 0 80px rgba(111, 79, 192, 0.18);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(28px, 5vw, 58px);
+  align-items: center;
+}
+
+.booking .section-kicker {
+  color: var(--green);
+  opacity: 1;
+}
+
+.booking h2 {
+  font-size: clamp(2.4rem, 4.5vw, 5rem);
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+.booking-card {
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055));
+  box-shadow: 0 24px 62px rgba(0, 0, 0, 0.26);
+}
+
+.booking-card p {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.booking-card .button {
+  margin-top: 26px;
+  background: var(--white);
+  color: var(--violet-deep);
+  border-color: var(--white);
+}
+
+.booking-card .button:hover {
+  background: var(--green);
+  color: #071020;
+  border-color: var(--green);
+}
