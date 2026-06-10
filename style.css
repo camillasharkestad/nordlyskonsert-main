@@ -644,7 +644,7 @@ h1 {
     linear-gradient(to right, rgba(5, 7, 17, 0.84), rgba(5, 7, 17, 0.24)),
     var(--forest-img);
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   display: flex;
   align-items: center;
 }
