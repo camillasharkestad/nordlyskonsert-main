@@ -1374,3 +1374,76 @@ h1 {
     height: auto;
   }
 }
+/* MODERNE OVERSKRIFTER - IKKE HERO/BANNER */
+
+.artist-intro h2,
+.featured-copy h2,
+.video-copy h2,
+.about-copy h2,
+.concerts h2,
+.atmosphere-card h2,
+.tickets h2,
+.booking h2,
+.featured-card h3,
+.event-info h3 {
+  font-family: "Josefin Sans", "Inter", Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}
+
+/* Litt sterkere vekt på mindre korttitler */
+
+.featured-card h3,
+.event-info h3 {
+  font-weight: 400;
+}
+
+/* Beholder hovedbanneret/ÁLFR-logoen som før */
+
+.hero h1 {
+  font-family: "Caesar Dressing", serif;
+}
+
+/* Beholder logoen øverst som før */
+
+.brand-name {
+  font-family: inherit;
+}
+/* MODERNE OVERSKRIFTER - Poppins */
+
+.artist-intro h2,
+.featured-copy h2,
+.video-copy h2,
+.about-copy h2,
+.concerts h2,
+.atmosphere-card h2,
+.tickets h2,
+.booking h2,
+.featured-card h3,
+.event-info h3 {
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+}
+
+/* Litt større og tydeligere hovedoverskrifter */
+.about-copy h2,
+.concerts h2,
+.featured-copy h2,
+.booking h2 {
+  font-weight: 600;
+}
+
+/* Beholder ÁLFR i hovedbanneret */
+.hero h1 {
+  font-family: "Caesar Dressing", serif;
+}
+
+/* Beholder navnet/logoen øverst slik den er */
+.brand-name {
+  font-family: inherit;
+}
