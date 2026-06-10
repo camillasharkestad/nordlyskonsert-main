@@ -1321,3 +1321,56 @@ h1 {
   color: #071020;
   border-color: var(--green);
 }
+/* Gjør ÁLFR-boksene bredere og like høye */
+
+.featured {
+  width: min(1400px, calc(100% - 64px));
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.featured-copy,
+.featured-card {
+  height: 100%;
+  min-height: 0;
+}
+
+.featured-copy {
+  padding: clamp(36px, 4vw, 58px);
+}
+
+.featured-card {
+  padding: clamp(36px, 4vw, 58px);
+  justify-content: center;
+}
+
+.featured-copy h2 {
+  font-size: clamp(2.6rem, 4vw, 4.6rem);
+  line-height: 1.02;
+}
+
+.featured-card h3 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.featured-copy p,
+.featured-card p {
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+/* På nettbrett/mobil skal de ligge under hverandre */
+
+@media (max-width: 900px) {
+  .featured {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+  }
+
+  .featured-copy,
+  .featured-card {
+    height: auto;
+  }
+}
