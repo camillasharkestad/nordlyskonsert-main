@@ -212,7 +212,7 @@
           occasion, and practical details.
         </p>
 
-        <p>
+            <p>
           The current spotlight is ÁLFR: a concert concept where music,
           storytelling and visual landscapes meet in a Nordic, atmospheric
           universe.
@@ -366,60 +366,55 @@
         }
 
         #concerts .concert-contact {
-          max-width: 1280px;
+          max-width: 1180px;
           margin: clamp(4rem, 7vw, 6rem) auto 0;
-          padding-top: clamp(3rem, 5vw, 4rem);
-          border-top: 1px solid rgba(0, 31, 44, 0.14);
+          padding-top: clamp(2.8rem, 5vw, 4rem);
+          border-top: 1px solid rgba(0, 31, 44, 0.12);
           display: grid;
-          grid-template-columns: 360px minmax(0, 1fr);
-          gap: clamp(3rem, 7vw, 7rem);
-          align-items: stretch;
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: clamp(2.5rem, 7vw, 6rem);
+          align-items: start;
         }
 
         #concerts .concert-contact-heading {
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          text-align: center;
+          text-align: left;
         }
 
         #concerts .concert-contact-heading h2 {
           margin: 0;
-          max-width: 320px;
           font-family: "Poppins", sans-serif;
-          font-size: clamp(2.1rem, 4vw, 3.4rem);
-          line-height: 1.08;
-          font-weight: 700;
-          letter-spacing: -0.03em;
+          font-size: clamp(1.6rem, 3vw, 2.3rem);
+          line-height: 1.15;
+          font-weight: 600;
+          letter-spacing: -0.02em;
           text-transform: uppercase;
           color: #001f2c;
         }
 
+        #concerts .concert-contact-heading p {
+          display: block;
+          max-width: 300px;
+          margin: 1rem 0 0;
+          font-size: 0.95rem;
+          line-height: 1.7;
+          color: rgba(0, 31, 44, 0.62);
+        }
+
         #concerts .concert-contact-card {
-          position: relative;
-          overflow: hidden;
-          min-height: 300px;
-          padding: clamp(2rem, 4vw, 3.2rem);
-          border: 1px solid rgba(0, 31, 44, 0.12);
-          border-radius: 34px;
-          background:
-            radial-gradient(circle at top right, rgba(109, 72, 216, 0.13), transparent 24rem),
-            linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 250, 242, 0.42));
-          box-shadow: 0 28px 70px rgba(30, 20, 60, 0.1);
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
           color: #001f2c;
         }
 
         #concerts .concert-contact-card::before {
-          content: "";
-          position: absolute;
-          inset: 1rem;
-          border: 1px solid rgba(0, 31, 44, 0.08);
-          border-radius: 26px;
-          pointer-events: none;
+          display: none;
         }
 
         #concerts .contact-label {
-          margin: 0 0 1rem;
+          margin: 0 0 0.9rem;
           font-size: 0.72rem;
           font-weight: 800;
           letter-spacing: 0.22em;
@@ -428,50 +423,53 @@
         }
 
         #concerts .concert-contact-card h3 {
-          margin: 0 0 1rem;
-          max-width: 760px;
+          margin: 0 0 1.2rem;
+          max-width: 680px;
           font-family: "Poppins", sans-serif;
-          font-size: clamp(1.8rem, 3.5vw, 3rem);
-          line-height: 1.08;
-          font-weight: 800;
+          font-size: clamp(1.8rem, 3.2vw, 3rem);
+          line-height: 1.12;
+          font-weight: 600;
           letter-spacing: -0.04em;
           color: #001f2c;
         }
 
         #concerts .concert-contact-card p {
-          max-width: 760px;
+          max-width: 700px;
           margin: 0 0 2rem;
-          font-size: clamp(1rem, 1.5vw, 1.14rem);
+          font-size: clamp(1rem, 1.3vw, 1.08rem);
           line-height: 1.75;
-          color: #3f4650;
+          color: rgba(0, 31, 44, 0.72);
         }
 
         #concerts .contact-lines {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 1rem;
+          gap: 0;
+          border-top: 1px solid rgba(0, 31, 44, 0.14);
         }
 
         #concerts .contact-line {
-          padding: 1rem;
-          border-radius: 18px;
-          background: rgba(255, 255, 255, 0.62);
-          border: 1px solid rgba(0, 31, 44, 0.08);
+          display: grid;
+          grid-template-columns: 120px minmax(0, 1fr);
+          gap: 1.5rem;
+          align-items: baseline;
+          padding: 1rem 0;
+          border-bottom: 1px solid rgba(0, 31, 44, 0.14);
+          background: transparent;
+          border-radius: 0;
         }
 
         #concerts .contact-line strong {
-          display: block;
-          margin-bottom: 0.35rem;
-          font-size: 0.68rem;
+          margin: 0;
+          font-size: 0.72rem;
           font-weight: 800;
           text-transform: uppercase;
-          letter-spacing: 0.14em;
-          color: #5b5368;
+          letter-spacing: 0.16em;
+          color: rgba(0, 31, 44, 0.48);
         }
 
         #concerts .contact-line a,
         #concerts .contact-line span {
-          font-size: 0.95rem;
+          font-size: 1rem;
           font-weight: 600;
           color: #001f2c;
         }
@@ -525,6 +523,156 @@
         .alfr-final-actions .text-link {
           color: white;
         }
+
+        @media (max-width: 900px) {
+          #concerts .concerts-layout,
+          #concerts .concert-contact {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+          }
+
+          #concerts .concerts-heading,
+          #concerts .concert-contact-heading {
+            text-align: left;
+            justify-content: flex-start;
+          }
+
+          #concerts .concert-contact-heading h2 {
+            max-width: none;
+          }
+        }
+
+        @media (max-width: 640px) {
+          #concerts .event-item {
+            grid-template-columns: 58px minmax(0, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+          }
+
+          #concerts .event-date-box {
+            padding-right: 0.8rem;
+          }
+
+          #concerts .event-date-box span {
+            font-size: 1.45rem;
+          }
+
+          #concerts .event-date-box small {
+            font-size: 0.72rem;
+          }
+
+          #concerts .event-link {
+            grid-column: 2;
+            justify-self: start;
+            margin-top: 0.45rem;
+          }
+
+          #concerts .contact-line {
+            grid-template-columns: 1fr;
+            gap: 0.3rem;
+          }
+        }
+      </style>
+
+      <div class="concerts-layout">
+        <div class="concerts-heading">
+          <p class="section-kicker">Concerts & assignments</p>
+          <h2>
+            Upcoming concerts
+            <span>2026</span>
+          </h2>
+          <p>
+            This section is ready for Marianne’s future concerts, commissioned
+            performances, collaborations and special projects. Until the full
+            overview is available, ÁLFR remains the highlighted event.
+          </p>
+        </div>
+
+        <div class="event-list" aria-label="Concert list">
+          <article class="event-item event-item-featured">
+            <div class="event-date-box">
+              <span>29</span>
+              <small>Apr</small>
+            </div>
+
+            <div class="event-info">
+              <p class="event-type">Featured concert</p>
+              <h3>ÁLFR — Northern Lights Concert</h3>
+              <p>19:00 &nbsp;&nbsp; Forum Scene Bergen, Norway</p>
+            </div>
+
+            <a href="#alfr-ticket" class="event-link">Get tickets</a>
+          </article>
+
+          <article class="event-item event-item-muted">
+            <div class="event-date-box event-date-box-empty">
+              <span>+</span>
+              <small>Soon</small>
+            </div>
+
+            <div class="event-info">
+              <p class="event-type">More dates</p>
+              <h3>Future concerts and projects</h3>
+              <p>Add new dates here when the programme is ready.</p>
+            </div>
+
+            <a href="#contact" class="event-link">Contact</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="concert-contact" id="contact">
+        <div class="concert-contact-heading">
+          <h2>Contact</h2>
+          <p>
+            For booking, concerts and private engagements.
+          </p>
+        </div>
+
+        <div class="concert-contact-card">
+          <p class="contact-label">Booking & enquiries</p>
+          <h3>Book Marianne for concerts, ceremonies and collaborations</h3>
+
+          <p>
+            For singing engagements, concerts, ceremonies, funerals or collaborations,
+            please get in touch to discuss the occasion, repertoire and practical details.
+          </p>
+
+          <div class="contact-lines">
+            <div class="contact-line">
+              <strong>Email</strong>
+              <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+            </div>
+
+            <div class="contact-line">
+              <strong>Phone</strong>
+              <a href="tel:YOUR_PHONE_HERE">YOUR_PHONE_HERE</a>
+            </div>
+
+            <div class="contact-line">
+              <strong>Based in</strong>
+              <span>Bergen / Askøy, Norway</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atmosphere" id="alfr-ticket" aria-labelledby="atmosphere-title">
+      <div class="atmosphere-card">
+        <p class="section-kicker">Forum Scene Bergen</p>
+        <h2 id="atmosphere-title">ÁLFR — 29 April 2026</h2>
+        <p>
+          Experience ÁLFR live in Bergen: a Northern Lights Concert with music,
+          visuals and Norwegian nature as its scenic universe.
+        </p>
+
+        <div class="alfr-final-actions">
+          <a href="#" class="button button-large">Buy tickets</a>
+          <a href="#contact" class="text-link">Contact enquiry</a>
+        </div>
+      </div>
+    </section>
 
         @media (max-width: 900px) {
           #concerts .concerts-layout,
