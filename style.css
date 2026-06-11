@@ -1460,3 +1460,23 @@ h1 {
     background-position: 68% 82px;
   }
 }
+/* Make the ÁLFR feature section calmer */
+.featured-copy h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 560px;
+}
+
+/* Make the right card heading slightly calmer too */
+.featured-card h3 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+/* Optional: make the whole feature boxes feel less massive */
+.featured-copy,
+.featured-card {
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
