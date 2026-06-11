@@ -1,0 +1,821 @@
+<!doctype html>
+
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Om Marianne Juvik Sæbø | Sanger og solist</title>
+  <meta name="description" content="Om Marianne Juvik Sæbø – sanger, solist og formidler. Book Marianne til konsert, seremoni, bryllup, minnestund, festival og høytidelige arrangementer.">
+
+  <style>
+    :root {
+      --bg: #fbf4ed;
+      --bg-light: #fffaf6;
+      --soft: #f3dfd5;
+      --rose: #b86e65;
+      --rose-light: #e4b9af;
+      --brown: #4d352f;
+      --brown-soft: #7c665e;
+      --text: #261f1c;
+      --muted: #756862;
+      --line: rgba(77, 53, 47, 0.16);
+      --white: #ffffff;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(77, 53, 47, 0.12);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      font-size: 1.35rem;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: var(--brown-soft);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-weight: 800;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 160px;
+      background: linear-gradient(180deg, rgba(255,255,255,0), var(--bg));
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1380px, calc(100% - 36px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: start;
+      gap: clamp(28px, 5vw, 76px);
+      padding: clamp(34px, 5vw, 76px) 0 0;
+    }
+
+    .hero-content {
+      padding-top: clamp(18px, 4vw, 54px);
+      padding-bottom: clamp(50px, 8vw, 110px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--rose);
+      font-size: 0.78rem;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: var(--rose);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 660px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.8rem, 8vw, 8.3rem);
+      line-height: 0.92;
+      font-weight: 400;
+      letter-spacing: -0.075em;
+      color: var(--brown);
+    }
+
+    .hero-lead {
+      margin: 26px 0 0;
+      max-width: 590px;
+      color: var(--brown-soft);
+      font-size: clamp(1.14rem, 2vw, 1.45rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: 1px solid var(--brown);
+      color: var(--brown);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--rose);
+      border-color: var(--rose);
+      color: var(--white);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-self: end;
+      margin-bottom: -12px;
+    }
+
+    .hero-image img {
+      width: min(100%, 760px);
+      height: auto;
+      object-fit: contain;
+      object-position: center bottom;
+    }
+
+    .intro {
+      padding: clamp(70px, 10vw, 130px) 0;
+      background: var(--bg);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(36px, 7vw, 92px);
+      align-items: start;
+      border-top: 1px solid var(--line);
+      padding-top: clamp(42px, 7vw, 78px);
+    }
+
+    .intro-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      font-size: clamp(2.5rem, 5.5vw, 6rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+      font-weight: 400;
+    }
+
+    .intro-text {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 650px;
+    }
+
+    .intro-text p:first-child {
+      margin-top: 0;
+    }
+
+    .intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto clamp(50px, 7vw, 82px);
+    }
+
+    .section-label {
+      color: var(--rose);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      font-size: clamp(2.8rem, 7vw, 6.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+      font-weight: 400;
+    }
+
+    .section-subtitle {
+      margin: 24px auto 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .history {
+      padding: clamp(72px, 10vw, 140px) 0;
+      background:
+        linear-gradient(180deg, var(--bg) 0%, #fff8f3 48%, var(--bg) 100%);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .story-list {
+      display: grid;
+      gap: clamp(56px, 8vw, 110px);
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(30px, 6vw, 82px);
+      align-items: center;
+    }
+
+    .story:nth-child(even) .story-media {
+      order: 2;
+    }
+
+    .story-media {
+      position: relative;
+      min-height: 430px;
+      background:
+        linear-gradient(135deg, #f4ded7, #fff8f3);
+      border: 2px dashed rgba(77, 53, 47, 0.28);
+      display: grid;
+      place-items: center;
+      color: var(--brown-soft);
+      text-align: center;
+      padding: 32px;
+    }
+
+    .story-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+    }
+
+    .placeholder-text {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 900;
+      color: var(--rose);
+    }
+
+    .story-badge {
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      background: rgba(255, 250, 246, 0.9);
+      border: 1px solid rgba(77, 53, 47, 0.12);
+      border-radius: 999px;
+      padding: 10px 15px;
+      color: var(--brown);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .story-copy h3 {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      font-weight: 400;
+    }
+
+    .story-copy p {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 1.05rem;
+    }
+
+    .story-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote {
+      padding: clamp(70px, 10vw, 130px) 0;
+      background: var(--bg);
+    }
+
+    .quote-text {
+      margin: 0 auto;
+      max-width: 980px;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--brown);
+      font-size: clamp(2.2rem, 5.8vw, 6rem);
+      line-height: 0.98;
+      letter-spacing: -0.075em;
+    }
+
+    .quote-text span {
+      color: var(--rose);
+    }
+
+    .video-section {
+      padding: clamp(72px, 10vw, 135px) 0;
+      background: #fff8f3;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 34px;
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-card h3 {
+      margin: 20px 0 8px;
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      font-weight: 400;
+    }
+
+    .video-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .booking {
+      padding: clamp(76px, 11vw, 145px) 0;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(228, 185, 175, 0.32), transparent 34%),
+        var(--bg);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(36px, 7vw, 92px);
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: clamp(46px, 7vw, 82px);
+    }
+
+    .booking h2 {
+      max-width: 650px;
+    }
+
+    .booking-text {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 590px;
+    }
+
+    .booking-text p:first-child {
+      margin-top: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 34px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 20px;
+      }
+
+      .hero-content {
+        order: 2;
+        padding: 28px 0 64px;
+      }
+
+      .hero-image {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      .hero-image img {
+        width: min(100%, 620px);
+      }
+
+      .intro-grid,
+      .story,
+      .video-grid,
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story:nth-child(even) .story-media {
+        order: 0;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        min-height: 66px;
+      }
+
+      .brand {
+        font-size: 1.08rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner {
+        width: min(100% - 24px, 1380px);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .story-media {
+        min-height: 300px;
+      }
+
+      .story-media img {
+        min-height: 300px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="wrap nav" aria-label="Hovedmeny">
+      <a class="brand" href="index.html">Marianne Juvik Sæbø</a>
+
+```
+  <ul class="nav-links">
+    <li><a href="#historien">Historien</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#booking">Booking</a></li>
+  </ul>
+</nav>
+```
+
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Banner med Marianne Juvik Sæbø">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">Sanger · solist · formidler</div>
+
+```
+      <h1>Marianne Juvik Sæbø</h1>
+
+      <p class="hero-lead">
+        En varm, erfaren og allsidig stemme til konserter, seremonier og anledninger der musikken skal bety noe.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#booking">Book Marianne</a>
+        <a class="button" href="#historien">Les historien</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png"
+        alt="Marianne Juvik Sæbø">
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <h2 class="intro-title">Musikk med nerve, varme og nærvær.</h2>
+
+      <div class="intro-text">
+        <p>
+          Marianne Juvik Sæbø er en norsk sanger og solist med solid musikalsk bakgrunn og et stort repertoar. Hun er utdannet ved Bergen Musikkonservatorium/Griegakademiet og Royal Academy of Music i London.
+        </p>
+
+        <p>
+          Hun beveger seg naturlig mellom klassisk musikk, salmer, folketoner, viser, jazz, musikal, gospel og opera. Enten hun synger i et kirkerom, på en scene eller i en høytidelig seremoni, skaper hun øyeblikk publikum husker.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="history" id="historien">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Historien til Marianne</div>
+      <h2>Fra Askøy til store scener.</h2>
+      <p class="section-subtitle">
+        Her kan du samle høydepunkter fra Mariannes karriere. Feltene under er midlertidige bildeplasser som du kan bytte ut med ekte bilder senere.
+      </p>
+    </div>
+
+    <div class="story-list">
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Kongen og Dronningen</div>
+          <div class="placeholder-text">Bytt til bilde fra anledningen</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Nystemten for Kongen og Dronningen</h3>
+          <p>
+            Et av de store øyeblikkene i Mariannes karriere var da hun sang <em>Nystemten</em> for Kongen og Dronningen. Slike oppdrag krever trygghet, presisjon og evnen til å bære en høytidelig stemning.
+          </p>
+          <p>
+            Marianne er en sanger som kan stå støtt i store øyeblikk, men samtidig formidle med varme og nærhet. Det gjør henne til et naturlig valg når musikken skal gi arrangementet verdighet og løft.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Internasjonalt oppdrag</div>
+          <div class="placeholder-text">Bytt til bilde fra keiser-oppdrag</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Da Marianne sang for en keiser</h3>
+          <p>
+            Marianne har også hatt oppdrag av internasjonal karakter, blant annet en anledning der hun sang for en keiser. Dette er en historie som viser bredden i karrieren hennes og tilliten hun får i helt spesielle sammenhenger.
+          </p>
+          <p>
+            Når du legger inn riktig bilde, kan denne teksten gjerne spisses med sted, årstall og hvilken anledning det var. Slik blir historien enda mer konkret og eksklusiv.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Konsertliv</div>
+          <div class="placeholder-text">Bytt til konsertbilde</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Solist med kor og orkestre</h3>
+          <p>
+            Marianne har vært solist med en rekke kor og orkestre, og hun har lang erfaring fra både små og store konsertprosjekter. Hun er trygg i møte med musikere, dirigenter, arrangører og publikum.
+          </p>
+          <p>
+            Repertoaret hennes gjør henne fleksibel: Hun kan levere et enkelt solistinnslag, en kirkekonsert, en større produksjon eller et program som skreddersys for anledningen.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Álfr</div>
+          <div class="placeholder-text">Bytt til bilde fra Álfr</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Álfr – en nordlyskonsert</h3>
+          <p>
+            I prosjektet <em>Álfr</em> møtes musikk, natur og visuelle uttrykk. Konserten er omtalt som en hyllest til nordlyset og til norsk natur, med vakker musikk, stillbilder og levende bilder.
+          </p>
+          <p>
+            Slike prosjekter viser Marianne som mer enn en solist. Hun er også en formidler og kunstnerisk drivkraft som kan skape en helhetlig opplevelse rundt musikken.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Musikalhuset</div>
+          <div class="placeholder-text">Bytt til bilde fra Musikalhuset</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Formidlerglede for nye generasjoner</h3>
+          <p>
+            Ved siden av konsertvirksomheten driver Marianne Musikalhuset på Askøy, en musikkskole der barn og unge får utvikle sangglede, musikalitet og scenisk trygghet.
+          </p>
+          <p>
+            Arbeidet med unge talenter sier mye om Marianne som artist: Hun er opptatt av formidling, tilstedeværelse og det å gi musikken videre.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Innspillinger</div>
+          <div class="placeholder-text">Bytt til albumbilde eller pressebilde</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Album, innspillinger og et bredt repertoar</h3>
+          <p>
+            Marianne har gitt ut flere egne album og medvirket på en rekke innspillinger. Repertoaret hennes spenner fra salmer og folketoner til jazz, gospel, musikal, klassiske verk og opera.
+          </p>
+          <p>
+            Den musikalske bredden gjør det lett å tilpasse oppdraget. Hun kan skape noe høytidelig, nært, lyst, sterkt eller storslått – alt etter hva arrangøren ønsker.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <p class="quote-text">
+      En stemme med kraft og varme. <span>En formidler som får publikum til å lytte.</span>
+    </p>
+  </div>
+</section>
+
+<section class="video-section" id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Se og hør Marianne</div>
+      <h2>Videoer og opptak</h2>
+      <p class="section-subtitle">
+        Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/fUQjwzukokw"
+            title="Marianne Juvik Sæbø - video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <h3>Marianne live</h3>
+        <p>
+          Et eksempel på Mariannes varme og sceniske nærvær.
+        </p>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/VQDGixABPcA"
+            title="Marianne Juvik Sæbø - video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <h3>Et nært musikalsk uttrykk</h3>
+        <p>
+          Et opptak som viser Marianne i et mer nært og formidlende uttrykk.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="wrap">
+    <div class="booking-grid">
+      <div>
+        <div class="section-label">Booking</div>
+        <h2>Vil du booke Marianne?</h2>
+      </div>
+
+      <div class="booking-text">
+        <p>
+          Book Marianne Juvik Sæbø til konsert, seremoni, bryllup, minnestund, festival, firmaarrangement eller høytidelig markering. Hun tilpasser repertoar, uttrykk og format til anledningen.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="kontakt.html">Kontakt for booking</a>
+          <a class="button" href="index.html">Til forsiden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© Marianne Juvik Sæbø</div>
+      <div>Sanger · solist · formidler</div>
+    </div>
+  </footer>
+</body>
+</html>
