@@ -65,7 +65,7 @@
       left: 0;
       right: 0;
       bottom: -1px;
-      height: 160px;
+      height: 70px;
       background: linear-gradient(180deg, rgba(255,255,255,0), var(--bg));
       pointer-events: none;
       z-index: 1;
@@ -80,12 +80,12 @@
       grid-template-columns: 0.9fr 1.1fr;
       align-items: start;
       gap: clamp(28px, 5vw, 76px);
-      padding: clamp(24px, 3.5vw, 54px) 0 0;
+      padding: clamp(16px, 2.5vw, 38px) 0 0;
     }
 
     .hero-content {
-      padding-top: clamp(8px, 2.2vw, 32px);
-      padding-bottom: clamp(50px, 8vw, 110px);
+      padding-top: clamp(4px, 1.5vw, 22px);
+      padding-bottom: clamp(20px, 3vw, 45px);
     }
 
     .eyebrow {
@@ -98,13 +98,6 @@
       letter-spacing: 0.17em;
       text-transform: uppercase;
       font-weight: 900;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 44px;
-      height: 1px;
-      background: var(--rose);
     }
 
     h1 {
@@ -176,7 +169,7 @@
     }
 
     .intro {
-      padding: clamp(70px, 10vw, 130px) 0;
+      padding: clamp(25px, 5vw, 60px) 0 clamp(70px, 10vw, 130px);
       background: var(--bg);
     }
 
@@ -186,7 +179,7 @@
       gap: clamp(36px, 7vw, 92px);
       align-items: start;
       border-top: 1px solid var(--line);
-      padding-top: clamp(42px, 7vw, 78px);
+      padding-top: clamp(32px, 5vw, 60px);
     }
 
     .intro-title {
@@ -449,7 +442,7 @@
 
       .hero-content {
         order: 2;
-        padding: 28px 0 64px;
+        padding: 28px 0 42px;
       }
 
       .hero-image {
