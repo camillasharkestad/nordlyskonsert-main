@@ -57,7 +57,7 @@
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 18% 12%, rgba(184, 110, 101, 0.13), transparent 26%),
+        radial-gradient(circle at 18% 12%, rgba(184, 110, 101, 0.12), transparent 26%),
         linear-gradient(135deg, #ffffff 0%, #fff8f3 58%, #f8e9e1 100%);
     }
 
@@ -202,87 +202,6 @@
 
     .intro-text p:last-child {
       margin-bottom: 0;
-    }
-
-    .contact-section {
-      padding: clamp(68px, 10vw, 132px) 0;
-      background: var(--brown);
-      color: var(--white);
-    }
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
-      gap: clamp(38px, 7vw, 96px);
-      align-items: end;
-    }
-
-    .contact-label {
-      margin-bottom: 16px;
-      color: var(--rose-light);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .contact-section h2 {
-      margin: 0;
-      max-width: 560px;
-      color: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3.1rem, 7vw, 7rem);
-      line-height: 0.9;
-      letter-spacing: -0.08em;
-      font-weight: 400;
-    }
-
-    .contact-text {
-      margin: 20px 0 0;
-      max-width: 440px;
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 1.05rem;
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 26px;
-      justify-items: start;
-    }
-
-    .contact-link {
-      display: inline-grid;
-      gap: 8px;
-      color: var(--white);
-      transition: 0.2s ease;
-    }
-
-    .contact-link span {
-      color: var(--rose-light);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .contact-link strong {
-      display: inline;
-      color: var(--white);
-      font-size: clamp(2rem, 4.5vw, 4.7rem);
-      line-height: 0.92;
-      letter-spacing: -0.055em;
-      font-weight: 900;
-      border-bottom: 3px solid rgba(255, 255, 255, 0.24);
-      padding-bottom: 10px;
-    }
-
-    .contact-link:hover {
-      transform: translateX(8px);
-    }
-
-    .contact-link:hover strong {
-      color: var(--rose-light);
-      border-color: var(--rose-light);
     }
 
     .section-head {
@@ -473,7 +392,7 @@
     .booking {
       padding: clamp(76px, 11vw, 145px) 0;
       background:
-        radial-gradient(circle at 85% 20%, rgba(228, 185, 175, 0.34), transparent 34%),
+        radial-gradient(circle at 85% 20%, rgba(228, 185, 175, 0.32), transparent 34%),
         var(--bg);
     }
 
@@ -501,27 +420,28 @@
     }
 
     .booking-links {
-      display: grid;
-      gap: 18px;
-      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      margin-top: 30px;
+      align-items: center;
     }
 
     .booking-links a {
       width: fit-content;
       color: var(--brown);
-      font-size: clamp(1.8rem, 3.4vw, 3.5rem);
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: -0.055em;
-      border-bottom: 3px solid rgba(77, 53, 47, 0.22);
-      padding-bottom: 8px;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      border-bottom: 1px solid rgba(77, 53, 47, 0.28);
+      padding-bottom: 4px;
       transition: 0.2s ease;
     }
 
     .booking-links a:hover {
       color: var(--rose);
       border-color: var(--rose);
-      transform: translateX(8px);
     }
 
     footer {
@@ -561,7 +481,6 @@
       }
 
       .intro-grid,
-      .contact-inner,
       .story,
       .video-grid,
       .booking-grid {
@@ -587,12 +506,13 @@
         width: 100%;
       }
 
-      .contact-link strong {
-        font-size: clamp(1.8rem, 10vw, 2.8rem);
+      .booking-links {
+        display: grid;
+        gap: 12px;
       }
 
       .booking-links a {
-        font-size: clamp(1.65rem, 9vw, 2.45rem);
+        font-size: 1.25rem;
       }
 
       .story-media {
@@ -623,6 +543,7 @@
         <div class="hero-content">
           <div class="eyebrow">Sanger · solist · formidler</div>
 
+```
       <h1>Marianne Juvik Sæbø</h1>
 
       <p class="hero-lead">
@@ -631,7 +552,7 @@
 
       <div class="hero-actions">
         <a class="button primary" href="#historien">Les historien</a>
-        <a class="button" href="#kontakt">Kontakt</a>
+        <a class="button" href="#booking">Kontakt</a>
       </div>
     </div>
 
@@ -657,30 +578,6 @@
           Hun beveger seg naturlig mellom klassisk musikk, salmer, folketoner, viser, jazz, musikal, gospel og opera. Enten hun synger i et kirkerom, på en scene eller i en høytidelig seremoni, skaper hun øyeblikk publikum husker.
         </p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact-section" id="kontakt">
-  <div class="wrap contact-inner">
-    <div>
-      <div class="contact-label">Booking og kontakt</div>
-      <h2>Ta kontakt direkte.</h2>
-      <p class="contact-text">
-        For booking, konserter, seremonier og andre musikalske anledninger.
-      </p>
-    </div>
-
-    <div class="contact-links">
-      <a class="contact-link" href="tel:+4795806860">
-        <span>Telefon</span>
-        <strong>958 06 860</strong>
-      </a>
-
-      <a class="contact-link" href="mailto:mail@marianne.no">
-        <span>E-post</span>
-        <strong>mail@marianne.no</strong>
-      </a>
     </div>
   </div>
 </section>
@@ -874,7 +771,6 @@
     </div>
   </div>
 </section>
-
 
   </main>
 
