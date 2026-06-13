@@ -349,6 +349,32 @@
       border-bottom: 1px solid var(--line);
     }
 
+    .listen-link-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 28px;
+    }
+
+    .listen-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brown);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 900;
+      border-bottom: 1px solid rgba(77, 53, 47, 0.28);
+      padding-bottom: 6px;
+      transition: 0.2s ease;
+    }
+
+    .listen-link:hover {
+      color: var(--rose);
+      border-color: var(--rose);
+      transform: translateY(-2px);
+    }
+
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -500,6 +526,15 @@
       display: flex;
       justify-content: space-between;
       gap: 24px;
+    }
+
+    .footer-inner a {
+      border-bottom: 1px solid rgba(117, 104, 98, 0.35);
+    }
+
+    .footer-inner a:hover {
+      color: var(--rose);
+      border-color: var(--rose);
     }
 
     @media (max-width: 980px) {
@@ -753,6 +788,12 @@
           <p class="section-subtitle">
             Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
           </p>
+
+          <div class="listen-link-wrap">
+            <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
+              Lytt til Marianne på Spotify
+            </a>
+          </div>
         </div>
 
         <div class="video-grid">
@@ -824,6 +865,11 @@
               <span>Basert i</span>
               <strong>Bergen / Askøy, Norge</strong>
             </div>
+
+            <div class="contact-row">
+              <span>Spotify</span>
+              <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">Lytt på Spotify</a>
+            </div>
           </div>
         </div>
       </div>
@@ -833,7 +879,10 @@
   <footer>
     <div class="wrap footer-inner">
       <div>© Marianne Juvik Sæbø</div>
-      <div>958 06 860 · mail@marianne.no</div>
+      <div>
+        958 06 860 · mail@marianne.no ·
+        <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">Spotify</a>
+      </div>
     </div>
   </footer>
 </body>
