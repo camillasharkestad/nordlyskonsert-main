@@ -280,6 +280,23 @@
       border-radius: 0;
     }
 
+    .story-media.image-clean {
+      min-height: 0;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      overflow: visible;
+      display: block;
+    }
+
+    .story-media.image-clean img {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      object-fit: contain;
+      border-radius: 0;
+    }
+
     .placeholder-text {
       font-size: 0.85rem;
       text-transform: uppercase;
@@ -343,17 +360,56 @@
       color: var(--rose);
     }
 
-    .video-section {
-      padding: clamp(72px, 10vw, 135px) 0;
+    .music-section {
+      padding: clamp(72px, 10vw, 140px) 0;
       background: #fff8f3;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .listen-link-wrap {
+    .album-grid {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: clamp(32px, 5vw, 70px);
+      row-gap: clamp(60px, 8vw, 96px);
+    }
+
+    .album-card {
+      text-align: right;
+    }
+
+    .album-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #f3dfd5;
+    }
+
+    .album-card h3 {
+      margin: 14px 0 0;
+      color: var(--brown);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .album-card p {
+      margin: 2px 0 0;
+      color: var(--brown);
+      font-size: clamp(1rem, 1.6vw, 1.25rem);
+      line-height: 1.25;
+      font-weight: 400;
+    }
+
+    .music-actions {
       display: flex;
       justify-content: center;
-      margin-top: 28px;
+      margin-top: clamp(46px, 7vw, 76px);
     }
 
     .listen-link {
@@ -374,6 +430,12 @@
       color: var(--rose);
       border-color: var(--rose);
       transform: translateY(-2px);
+    }
+
+    .video-section {
+      padding: clamp(72px, 10vw, 135px) 0;
+      background: #fff8f3;
+      border-bottom: 1px solid var(--line);
     }
 
     .video-grid {
@@ -572,6 +634,16 @@
       }
     }
 
+    @media (max-width: 760px) {
+      .album-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .album-card {
+        text-align: left;
+      }
+    }
+
     @media (max-width: 680px) {
       .wrap,
       .hero-inner {
@@ -595,6 +667,15 @@
         min-height: 300px;
       }
 
+      .story-media.image-clean {
+        min-height: 0;
+        border-radius: 0;
+      }
+
+      .story-media.image-clean img {
+        min-height: 0;
+      }
+
       .video-frame {
         border-radius: 22px;
       }
@@ -609,27 +690,7 @@
         flex-direction: column;
       }
     }
-.story-list .story:nth-child(4) .story-media {
-  background: transparent !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-  overflow: visible !important;
-  min-height: 0 !important;
-  display: block !important;
-}
-
-.story-list .story:nth-child(4) .story-media img {
-  width: 100% !important;
-  height: auto !important;
-  min-height: 0 !important;
-  object-fit: contain !important;
-  border-radius: 0 !important;
-}
-
-.story-list .story:nth-child(4) .story-badge,
-.story-list .story:nth-child(4) .placeholder-text {
-  display: none !important;
-}  </style>
+  </style>
 </head>
 
 <body>
@@ -740,11 +801,10 @@
           </article>
 
           <article class="story">
-            <div class="story-media">
+            <div class="story-media image-clean">
               <img
                 src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781020486/marianne_nluage.jpg"
                 alt="Marianne Juvik Sæbø – Álfr nordlyskonsert">
-              <div class="story-badge">Álfr</div>
             </div>
 
             <div class="story-copy">
@@ -803,6 +863,74 @@
       </div>
     </section>
 
+    <section class="music-section" id="musikk">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-label">Musikk og utgivelser</div>
+          <h2>Hør Marianne</h2>
+          <p class="section-subtitle">
+            Et utvalg innspillinger og musikkprosjekter. Lytt videre på Spotify.
+          </p>
+        </div>
+
+        <div class="album-grid">
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350875/1900x1900-000000-80-0-0_x64pbw.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350876/ab67616d0000b273ea378547231fdb3dd1b3e23b_o7ltrp.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350879/ab67616d00001e0242ac5b9ec4ef706e50032ce7_xj1pdj.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350881/images_aad9xn.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350883/R-14459998-1574963785-3644_ijdlze.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+
+          <article class="album-card">
+            <img
+              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350885/R-23689337-1656170835-4544_awubo8.jpg"
+              alt="Utgivelse med Marianne Juvik Sæbø">
+            <h3>Utgivelse</h3>
+            <p>Marianne Juvik Sæbø</p>
+          </article>
+        </div>
+
+        <div class="music-actions">
+          <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
+            Lytt til Marianne på Spotify
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="video-section" id="video">
       <div class="wrap">
         <div class="section-head">
@@ -811,12 +939,6 @@
           <p class="section-subtitle">
             Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
           </p>
-
-          <div class="listen-link-wrap">
-            <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
-              Lytt til Marianne på Spotify
-            </a>
-          </div>
         </div>
 
         <div class="video-grid">
