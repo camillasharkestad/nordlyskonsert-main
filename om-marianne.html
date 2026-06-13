@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="no">
 <head>
@@ -151,6 +152,42 @@
       background: var(--rose);
       border-color: var(--rose);
       color: var(--white);
+    }
+
+    .contact-highlight {
+      margin-top: 26px;
+      padding: 20px 24px;
+      max-width: 560px;
+      background: #fff8f3;
+      border: 1px solid rgba(77, 53, 47, 0.16);
+      border-radius: 18px;
+      color: var(--brown);
+      box-shadow: 0 12px 30px rgba(77, 53, 47, 0.08);
+    }
+
+    .contact-highlight p {
+      margin: 0 0 6px;
+      color: var(--rose);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .contact-highlight div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 700;
+    }
+
+    .contact-highlight a {
+      color: var(--brown);
+    }
+
+    .contact-highlight a:hover {
+      color: var(--rose);
     }
 
     .hero-image {
@@ -420,6 +457,38 @@
       margin-top: 0;
     }
 
+    .booking-contact {
+      margin-top: 26px;
+      padding: 26px;
+      background: #fff8f3;
+      border: 1px solid rgba(77, 53, 47, 0.16);
+      border-radius: 22px;
+      color: var(--brown);
+    }
+
+    .booking-contact strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--rose);
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .booking-contact a {
+      display: block;
+      width: fit-content;
+      color: var(--brown);
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .booking-contact a:hover {
+      color: var(--rose);
+    }
+
     footer {
       border-top: 1px solid var(--line);
       padding: 34px 0;
@@ -480,6 +549,15 @@
         width: 100%;
       }
 
+      .contact-highlight div {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .contact-highlight span {
+        display: none;
+      }
+
       .story-media {
         min-height: 300px;
       }
@@ -509,8 +587,17 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#booking">Book Marianne</a>
-            <a class="button" href="#historien">Les historien</a>
+            <a class="button primary" href="tel:+4795806860">Ring Marianne</a>
+            <a class="button" href="mailto:mail@marianne.no">Send e-post</a>
+          </div>
+
+          <div class="contact-highlight">
+            <p>Booking og kontakt</p>
+            <div>
+              <a href="tel:+4795806860">Tlf. 958 06 860</a>
+              <span>·</span>
+              <a href="mailto:mail@marianne.no">mail@marianne.no</a>
+            </div>
           </div>
         </div>
 
@@ -721,9 +808,15 @@
               Book Marianne Juvik Sæbø til konsert, seremoni, bryllup, minnestund, festival, firmaarrangement eller høytidelig markering. Hun tilpasser repertoar, uttrykk og format til anledningen.
             </p>
 
+            <div class="booking-contact">
+              <strong>Kontakt Marianne direkte</strong>
+              <a href="tel:+4795806860">Tlf. 958 06 860</a>
+              <a href="mailto:mail@marianne.no">mail@marianne.no</a>
+            </div>
+
             <div class="hero-actions">
-              <a class="button primary" href="kontakt.html">Kontakt for booking</a>
-              <a class="button" href="index.html">Til forsiden</a>
+              <a class="button primary" href="tel:+4795806860">Ring 958 06 860</a>
+              <a class="button" href="mailto:mail@marianne.no">Send e-post</a>
             </div>
           </div>
         </div>
@@ -734,8 +827,9 @@
   <footer>
     <div class="wrap footer-inner">
       <div>© Marianne Juvik Sæbø</div>
-      <div>Sanger · solist · formidler</div>
+      <div>Tlf. 958 06 860 · mail@marianne.no</div>
     </div>
   </footer>
 </body>
 </html>
+```
