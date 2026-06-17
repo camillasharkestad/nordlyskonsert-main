@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="no">
 <head>
   <meta charset="utf-8">
@@ -482,7 +483,7 @@
     .contact {
       padding: clamp(64px, 9vw, 105px) 0;
       background: var(--bg);
-      border-top: 1px solid var(--line);
+      border-top: 0;
     }
 
     .contact-grid {
@@ -496,7 +497,7 @@
       margin: 0 0 14px;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--brown);
-      font-size: clamp(1.6rem, 3vw, 2.35rem);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
       line-height: 1;
       letter-spacing: -0.04em;
       font-weight: 900;
@@ -504,14 +505,14 @@
 
     .contact-side p {
       margin: 0;
-      max-width: 260px;
+      max-width: 230px;
       color: var(--muted);
       font-size: 1rem;
       line-height: 1.55;
     }
 
     .contact-label {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       color: var(--rose);
       font-size: 0.76rem;
       letter-spacing: 0.24em;
@@ -521,10 +522,10 @@
 
     .contact-main h3 {
       margin: 0;
-      max-width: 720px;
+      max-width: 760px;
       color: var(--brown);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.2rem, 4.1vw, 4.2rem);
+      font-size: clamp(2.4rem, 4.8vw, 4.9rem);
       line-height: 0.96;
       letter-spacing: -0.075em;
       font-weight: 400;
@@ -532,25 +533,26 @@
 
     .contact-main p {
       margin: 24px 0 34px;
-      max-width: 760px;
+      max-width: 680px;
       color: var(--muted);
-      font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+      font-size: clamp(1.02rem, 1.5vw, 1.16rem);
       line-height: 1.6;
     }
 
     .contact-info {
       display: grid;
-      border-top: 1px solid var(--line);
-      max-width: 820px;
+      gap: 16px;
+      max-width: 720px;
+      border-top: 0;
     }
 
     .contact-row {
       display: grid;
       grid-template-columns: 150px 1fr;
       gap: 24px;
-      align-items: center;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+      padding: 0;
+      border-bottom: 0;
     }
 
     .contact-row span {
@@ -567,16 +569,14 @@
       font-size: clamp(1rem, 1.5vw, 1.18rem);
       line-height: 1.25;
       font-weight: 800;
-    }
-
-    .contact-row a {
-      width: fit-content;
-      border-bottom: 1px solid rgba(77, 53, 47, 0.35);
+      border-bottom: 0;
+      text-decoration: none;
+      box-shadow: none;
     }
 
     .contact-row a:hover {
       color: var(--rose);
-      border-color: var(--rose);
+      border-bottom: 0;
     }
 
     footer {
@@ -690,8 +690,7 @@
 
       .contact-row {
         grid-template-columns: 1fr;
-        gap: 8px;
-        padding: 18px 0;
+        gap: 4px;
       }
 
       .footer-inner {
@@ -699,6 +698,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -708,325 +708,330 @@
         <div class="hero-content">
           <div class="eyebrow">Sanger · solist · formidler</div>
 
-          <h1>Marianne Juvik Sæbø</h1>
+```
+      <h1>Marianne Juvik Sæbø</h1>
 
-          <p class="hero-lead">
-            En varm, erfaren og allsidig stemme til konserter, seremonier og anledninger der musikken skal bety noe.
-          </p>
+      <p class="hero-lead">
+        En varm, erfaren og allsidig stemme til konserter, seremonier og anledninger der musikken skal bety noe.
+      </p>
 
-          <div class="hero-actions">
-            <a class="button primary" href="#historien">Les historien</a>
-            <a class="button" href="#booking">Kontakt</a>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <img
-            src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png"
-            alt="Marianne Juvik Sæbø">
-        </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#historien">Les historien</a>
+        <a class="button" href="#booking">Kontakt</a>
       </div>
-    </section>
+    </div>
 
-    <section class="intro">
-      <div class="wrap">
-        <div class="intro-grid">
-          <h2 class="intro-title">Musikk med nerve, varme og nærvær.</h2>
+    <div class="hero-image">
+      <img
+        src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png"
+        alt="Marianne Juvik Sæbø">
+    </div>
+  </div>
+</section>
 
-          <div class="intro-text">
-            <p>
-              Marianne Juvik Sæbø er en norsk sanger og solist med solid musikalsk bakgrunn og et stort repertoar. Hun er utdannet ved Bergen Musikkonservatorium/Griegakademiet og Royal Academy of Music i London.
-            </p>
+<section class="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <h2 class="intro-title">Musikk med nerve, varme og nærvær.</h2>
 
-            <p>
-              Hun beveger seg naturlig mellom klassisk musikk, salmer, folketoner, viser, jazz, musikal, gospel og opera. Enten hun synger i et kirkerom, på en scene eller i en høytidelig seremoni, skaper hun øyeblikk publikum husker.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div class="intro-text">
+        <p>
+          Marianne Juvik Sæbø er en norsk sanger og solist med solid musikalsk bakgrunn og et stort repertoar. Hun er utdannet ved Bergen Musikkonservatorium/Griegakademiet og Royal Academy of Music i London.
+        </p>
 
-    <section class="history" id="historien">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">Historien til Marianne</div>
-          <h2>Fra Askøy til store scener.</h2>
-          <p class="section-subtitle">
-            Her kan du samle høydepunkter fra Mariannes karriere. Feltene under er midlertidige bildeplasser som du kan bytte ut med ekte bilder senere.
-          </p>
-        </div>
-
-        <div class="story-list">
-          <article class="story">
-            <div class="story-media">
-              <div class="story-badge">Kongen og Dronningen</div>
-              <div class="placeholder-text">Bytt til bilde fra anledningen</div>
-            </div>
-
-            <div class="story-copy">
-              <h3>Nystemten for Kongen og Dronningen</h3>
-              <p>
-                Et av de store øyeblikkene i Mariannes karriere var da hun sang <em>Nystemten</em> for Kongen og Dronningen. Slike oppdrag krever trygghet, presisjon og evnen til å bære en høytidelig stemning.
-              </p>
-              <p>
-                Marianne er en sanger som kan stå støtt i store øyeblikk, men samtidig formidle med varme og nærhet. Det gjør henne til et naturlig valg når musikken skal gi arrangementet verdighet og løft.
-              </p>
-            </div>
-          </article>
-
-          <article class="story">
-            <div class="story-media">
-              <div class="story-badge">Internasjonalt oppdrag</div>
-              <div class="placeholder-text">Bytt til bilde fra keiser-oppdrag</div>
-            </div>
-
-            <div class="story-copy">
-              <h3>Da Marianne sang for en keiser</h3>
-              <p>
-                Marianne har også hatt oppdrag av internasjonal karakter, blant annet en anledning der hun sang for en keiser. Dette er en historie som viser bredden i karrieren hennes og tilliten hun får i helt spesielle sammenhenger.
-              </p>
-              <p>
-                Når du legger inn riktig bilde, kan denne teksten gjerne spisses med sted, årstall og hvilken anledning det var. Slik blir historien enda mer konkret og eksklusiv.
-              </p>
-            </div>
-          </article>
-
-          <article class="story">
-            <div class="story-media">
-              <div class="story-badge">Konsertliv</div>
-              <div class="placeholder-text">Bytt til konsertbilde</div>
-            </div>
-
-            <div class="story-copy">
-              <h3>Solist med kor og orkestre</h3>
-              <p>
-                Marianne har vært solist med en rekke kor og orkestre, og hun har lang erfaring fra både små og store konsertprosjekter. Hun er trygg i møte med musikere, dirigenter, arrangører og publikum.
-              </p>
-              <p>
-                Repertoaret hennes gjør henne fleksibel: Hun kan levere et enkelt solistinnslag, en kirkekonsert, en større produksjon eller et program som skreddersys for anledningen.
-              </p>
-            </div>
-          </article>
-
-          <article class="story">
-            <div class="story-media image-clean">
-              <img
-                src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781020486/marianne_nluage.jpg"
-                alt="Marianne Juvik Sæbø – Álfr nordlyskonsert">
-            </div>
-
-            <div class="story-copy">
-              <h3>Álfr – en nordlyskonsert</h3>
-              <p>
-                I prosjektet <em>Álfr</em> møtes musikk, natur og visuelle uttrykk. Konserten er omtalt som en hyllest til nordlyset og til norsk natur, med vakker musikk, stillbilder og levende bilder.
-              </p>
-              <p>
-                Slike prosjekter viser Marianne som mer enn en solist. Hun er også en formidler og kunstnerisk drivkraft som kan skape en helhetlig opplevelse rundt musikken.
-              </p>
-            </div>
-          </article>
-
-          <article class="story">
-            <div class="story-media">
-              <div class="story-badge">Musikalhuset</div>
-              <div class="placeholder-text">Bytt til bilde fra Musikalhuset</div>
-            </div>
-
-            <div class="story-copy">
-              <h3>Formidlerglede for nye generasjoner</h3>
-              <p>
-                Ved siden av konsertvirksomheten driver Marianne Musikalhuset på Askøy, en musikkskole der barn og unge får utvikle sangglede, musikalitet og scenisk trygghet.
-              </p>
-              <p>
-                Arbeidet med unge talenter sier mye om Marianne som artist: Hun er opptatt av formidling, tilstedeværelse og det å gi musikken videre.
-              </p>
-            </div>
-          </article>
-
-          <article class="story">
-            <div class="story-media">
-              <div class="story-badge">Innspillinger</div>
-              <div class="placeholder-text">Bytt til albumbilde eller pressebilde</div>
-            </div>
-
-            <div class="story-copy">
-              <h3>Album, innspillinger og et bredt repertoar</h3>
-              <p>
-                Marianne har gitt ut flere egne album og medvirket på en rekke innspillinger. Repertoaret hennes spenner fra salmer og folketoner til jazz, gospel, musikal, klassiske verk og opera.
-              </p>
-              <p>
-                Den musikalske bredden gjør det lett å tilpasse oppdraget. Hun kan skape noe høytidelig, nært, lyst, sterkt eller storslått – alt etter hva arrangøren ønsker.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote">
-      <div class="wrap">
-        <p class="quote-text">
-          En stemme med kraft og varme. <span>En formidler som får publikum til å lytte.</span>
+        <p>
+          Hun beveger seg naturlig mellom klassisk musikk, salmer, folketoner, viser, jazz, musikal, gospel og opera. Enten hun synger i et kirkerom, på en scene eller i en høytidelig seremoni, skaper hun øyeblikk publikum husker.
         </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="music-section" id="musikk">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">Musikk og utgivelser</div>
-          <h2>Hør Marianne</h2>
-          <p class="section-subtitle">
-            Et utvalg innspillinger og musikkprosjekter. Lytt videre på Spotify.
+<section class="history" id="historien">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Historien til Marianne</div>
+      <h2>Fra Askøy til store scener.</h2>
+      <p class="section-subtitle">
+        Her kan du samle høydepunkter fra Mariannes karriere. Feltene under er midlertidige bildeplasser som du kan bytte ut med ekte bilder senere.
+      </p>
+    </div>
+
+    <div class="story-list">
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Kongen og Dronningen</div>
+          <div class="placeholder-text">Bytt til bilde fra anledningen</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Nystemten for Kongen og Dronningen</h3>
+          <p>
+            Et av de store øyeblikkene i Mariannes karriere var da hun sang <em>Nystemten</em> for Kongen og Dronningen. Slike oppdrag krever trygghet, presisjon og evnen til å bære en høytidelig stemning.
+          </p>
+          <p>
+            Marianne er en sanger som kan stå støtt i store øyeblikk, men samtidig formidle med varme og nærhet. Det gjør henne til et naturlig valg når musikken skal gi arrangementet verdighet og løft.
           </p>
         </div>
+      </article>
 
-        <div class="album-grid">
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350875/1900x1900-000000-80-0-0_x64pbw.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
-
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350876/ab67616d0000b273ea378547231fdb3dd1b3e23b_o7ltrp.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
-
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350879/ab67616d00001e0242ac5b9ec4ef706e50032ce7_xj1pdj.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
-
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350881/images_aad9xn.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
-
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350883/R-14459998-1574963785-3644_ijdlze.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
-
-          <article class="album-card">
-            <img
-              src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350885/R-23689337-1656170835-4544_awubo8.jpg"
-              alt="Utgivelse med Marianne Juvik Sæbø">
-            <h3>Utgivelse</h3>
-            <p>Marianne Juvik Sæbø</p>
-          </article>
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Internasjonalt oppdrag</div>
+          <div class="placeholder-text">Bytt til bilde fra keiser-oppdrag</div>
         </div>
 
-        <div class="music-actions">
-          <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
-            Lytt til Marianne på Spotify
+        <div class="story-copy">
+          <h3>Da Marianne sang for en keiser</h3>
+          <p>
+            Marianne har også hatt oppdrag av internasjonal karakter, blant annet en anledning der hun sang for en keiser. Dette er en historie som viser bredden i karrieren hennes og tilliten hun får i helt spesielle sammenhenger.
+          </p>
+          <p>
+            Når du legger inn riktig bilde, kan denne teksten gjerne spisses med sted, årstall og hvilken anledning det var. Slik blir historien enda mer konkret og eksklusiv.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Konsertliv</div>
+          <div class="placeholder-text">Bytt til konsertbilde</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Solist med kor og orkestre</h3>
+          <p>
+            Marianne har vært solist med en rekke kor og orkestre, og hun har lang erfaring fra både små og store konsertprosjekter. Hun er trygg i møte med musikere, dirigenter, arrangører og publikum.
+          </p>
+          <p>
+            Repertoaret hennes gjør henne fleksibel: Hun kan levere et enkelt solistinnslag, en kirkekonsert, en større produksjon eller et program som skreddersys for anledningen.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media image-clean">
+          <img
+            src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781020486/marianne_nluage.jpg"
+            alt="Marianne Juvik Sæbø – Álfr nordlyskonsert">
+        </div>
+
+        <div class="story-copy">
+          <h3>Álfr – en nordlyskonsert</h3>
+          <p>
+            I prosjektet <em>Álfr</em> møtes musikk, natur og visuelle uttrykk. Konserten er omtalt som en hyllest til nordlyset og til norsk natur, med vakker musikk, stillbilder og levende bilder.
+          </p>
+          <p>
+            Slike prosjekter viser Marianne som mer enn en solist. Hun er også en formidler og kunstnerisk drivkraft som kan skape en helhetlig opplevelse rundt musikken.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Musikalhuset</div>
+          <div class="placeholder-text">Bytt til bilde fra Musikalhuset</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Formidlerglede for nye generasjoner</h3>
+          <p>
+            Ved siden av konsertvirksomheten driver Marianne Musikalhuset på Askøy, en musikkskole der barn og unge får utvikle sangglede, musikalitet og scenisk trygghet.
+          </p>
+          <p>
+            Arbeidet med unge talenter sier mye om Marianne som artist: Hun er opptatt av formidling, tilstedeværelse og det å gi musikken videre.
+          </p>
+        </div>
+      </article>
+
+      <article class="story">
+        <div class="story-media">
+          <div class="story-badge">Innspillinger</div>
+          <div class="placeholder-text">Bytt til albumbilde eller pressebilde</div>
+        </div>
+
+        <div class="story-copy">
+          <h3>Album, innspillinger og et bredt repertoar</h3>
+          <p>
+            Marianne har gitt ut flere egne album og medvirket på en rekke innspillinger. Repertoaret hennes spenner fra salmer og folketoner til jazz, gospel, musikal, klassiske verk og opera.
+          </p>
+          <p>
+            Den musikalske bredden gjør det lett å tilpasse oppdraget. Hun kan skape noe høytidelig, nært, lyst, sterkt eller storslått – alt etter hva arrangøren ønsker.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <p class="quote-text">
+      En stemme med kraft og varme. <span>En formidler som får publikum til å lytte.</span>
+    </p>
+  </div>
+</section>
+
+<section class="music-section" id="musikk">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Musikk og utgivelser</div>
+      <h2>Hør Marianne</h2>
+      <p class="section-subtitle">
+        Et utvalg innspillinger og musikkprosjekter. Lytt videre på Spotify.
+      </p>
+    </div>
+
+    <div class="album-grid">
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350875/1900x1900-000000-80-0-0_x64pbw.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350876/ab67616d0000b273ea378547231fdb3dd1b3e23b_o7ltrp.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350879/ab67616d00001e0242ac5b9ec4ef706e50032ce7_xj1pdj.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350881/images_aad9xn.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350883/R-14459998-1574963785-3644_ijdlze.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+
+      <article class="album-card">
+        <img
+          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350885/R-23689337-1656170835-4544_awubo8.jpg"
+          alt="Utgivelse med Marianne Juvik Sæbø">
+        <h3>Utgivelse</h3>
+        <p>Marianne Juvik Sæbø</p>
+      </article>
+    </div>
+
+    <div class="music-actions">
+      <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
+        Lytt til Marianne på Spotify
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="video-section" id="video">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Se og hør Marianne</div>
+      <h2>Videoer og opptak</h2>
+      <p class="section-subtitle">
+        Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/fUQjwzukokw"
+            title="Marianne Juvik Sæbø - video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <h3>Marianne live</h3>
+        <p>
+          Et eksempel på Mariannes varme og sceniske nærvær.
+        </p>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/VQDGixABPcA"
+            title="Marianne Juvik Sæbø - video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <h3>Et nært musikalsk uttrykk</h3>
+        <p>
+          Et opptak som viser Marianne i et mer nært og formidlende uttrykk.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="booking">
+  <div class="wrap contact-grid">
+    <div class="contact-side">
+      <h2>Kontakt</h2>
+      <p>
+        For booking og forespørsler.
+      </p>
+    </div>
+
+    <div class="contact-main">
+      <div class="contact-label">Booking</div>
+
+      <h3>
+        Book Marianne til konserter og seremonier.
+      </h3>
+
+      <p>
+        Ta kontakt for sangoppdrag, konserter, seremonier, begravelser eller samarbeid.
+      </p>
+
+      <div class="contact-info">
+        <div class="contact-row">
+          <span>E-post</span>
+          <a href="mailto:mail@marianne.no">mail@marianne.no</a>
+        </div>
+
+        <div class="contact-row">
+          <span>Telefon</span>
+          <a href="tel:+4795806860">958 06 860</a>
+        </div>
+
+        <div class="contact-row">
+          <span>Basert i</span>
+          <strong>Bergen / Askøy, Norge</strong>
+        </div>
+
+        <div class="contact-row">
+          <span>Spotify</span>
+          <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
+            Lytt på Spotify
           </a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+```
 
-    <section class="video-section" id="video">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="section-label">Se og hør Marianne</div>
-          <h2>Videoer og opptak</h2>
-          <p class="section-subtitle">
-            Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
-          </p>
-        </div>
-
-        <div class="video-grid">
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed/fUQjwzukokw"
-                title="Marianne Juvik Sæbø - video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <h3>Marianne live</h3>
-            <p>
-              Et eksempel på Mariannes varme og sceniske nærvær.
-            </p>
-          </article>
-
-          <article class="video-card">
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed/VQDGixABPcA"
-                title="Marianne Juvik Sæbø - video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <h3>Et nært musikalsk uttrykk</h3>
-            <p>
-              Et opptak som viser Marianne i et mer nært og formidlende uttrykk.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="booking">
-      <div class="wrap contact-grid">
-        <div class="contact-side">
-          <h2>Kontakt</h2>
-          <p>
-            For booking, konserter og private arrangementer.
-          </p>
-        </div>
-
-        <div class="contact-main">
-          <div class="contact-label">Booking og forespørsler</div>
-
-          <h3>
-            Book Marianne til konserter, seremonier og samarbeid.
-          </h3>
-
-          <p>
-            Ta kontakt for sangoppdrag, konserter, seremonier, begravelser eller samarbeid. Sammen finner dere riktig repertoar, uttrykk og praktiske detaljer.
-          </p>
-
-          <div class="contact-info">
-            <div class="contact-row">
-              <span>E-post</span>
-              <a href="mailto:mail@marianne.no">mail@marianne.no</a>
-            </div>
-
-            <div class="contact-row">
-              <span>Telefon</span>
-              <a href="tel:+4795806860">958 06 860</a>
-            </div>
-
-            <div class="contact-row">
-              <span>Basert i</span>
-              <strong>Bergen / Askøy, Norge</strong>
-            </div>
-
-            <div class="contact-row">
-              <span>Spotify</span>
-              <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">Lytt på Spotify</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
