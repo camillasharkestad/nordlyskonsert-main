@@ -654,21 +654,29 @@
       }
     }
 
-    @media (max-width: 760px) {
-      .album-grid {
-        width: min(430px, 100%);
-        grid-template-columns: 1fr;
-      }
+   @media (max-width: 760px) {
+  .album-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 34px;
+  }
 
-      .album-card {
-        text-align: left;
-      }
+  .album-card {
+    text-align: center;
+  }
 
-      .album-card img {
-        max-width: 100%;
-        margin-left: 0;
-      }
-    }
+  .album-card img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .album-card h3,
+  .album-card p {
+    font-size: 0.78rem;
+    line-height: 1.25;
+  }
+}
 
     @media (max-width: 680px) {
       .wrap,
