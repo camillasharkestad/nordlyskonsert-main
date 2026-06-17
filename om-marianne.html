@@ -53,8 +53,6 @@
       margin: 0 auto;
     }
 
-    /* MOBILMENY */
-
     .mobile-header {
       display: none;
     }
@@ -508,6 +506,105 @@
       font-size: 1rem;
     }
 
+    .concerts {
+      padding: clamp(64px, 9vw, 105px) 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .concerts-layout {
+      display: grid;
+      grid-template-columns: 0.55fr 1.45fr;
+      gap: clamp(36px, 7vw, 88px);
+      align-items: start;
+    }
+
+    .concerts-heading h2 {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--brown);
+    }
+
+    .concerts-heading h2 span {
+      display: block;
+      margin-top: 8px;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+    }
+
+    .event-list {
+      display: grid;
+      gap: 28px;
+    }
+
+    .event-item {
+      display: grid;
+      grid-template-columns: 70px minmax(0, 1fr) 140px;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .event-date-box {
+      padding-right: 20px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+      color: var(--brown);
+      line-height: 1;
+    }
+
+    .event-date-box span {
+      display: block;
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .event-date-box small {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .event-info h3 {
+      margin: 0 0 4px;
+      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--brown);
+    }
+
+    .event-info p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.45;
+    }
+
+    .event-link {
+      justify-self: end;
+      align-self: start;
+      padding-bottom: 3px;
+      border-bottom: 1px solid currentColor;
+      color: var(--brown);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .event-link:hover {
+      color: var(--rose);
+    }
+
     .contact {
       padding: clamp(64px, 9vw, 105px) 0;
       background: var(--bg);
@@ -655,7 +752,8 @@
       .intro-grid,
       .story,
       .video-grid,
-      .contact-grid {
+      .contact-grid,
+      .concerts-layout {
         grid-template-columns: 1fr;
       }
 
@@ -737,13 +835,15 @@
         position: fixed;
         top: 66px;
         left: 0;
-        bottom: 0;
+        right: 0;
+        bottom: auto;
         z-index: 1001;
-        width: min(82vw, 360px);
-        padding: 34px 28px;
-        background: rgba(255, 248, 243, 0.98);
-        border-right: 1px solid rgba(77, 53, 47, 0.12);
-        box-shadow: 26px 0 64px rgba(77, 53, 47, 0.16);
+        width: 100%;
+        min-height: calc(100vh - 66px);
+        padding: 70px 28px 40px;
+        background: #fffaf6;
+        border-right: 0;
+        box-shadow: none;
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -754,6 +854,9 @@
       }
 
       .mobile-nav a {
+        max-width: 620px;
+        width: 100%;
+        margin: 0 auto;
         padding: 15px 0;
         color: var(--brown);
         font-family: Arial, Helvetica, sans-serif;
@@ -810,6 +913,17 @@
       .album-card p {
         font-size: 0.78rem;
         line-height: 1.25;
+      }
+
+      .event-item {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .event-link {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 4px;
       }
     }
 
@@ -872,33 +986,6 @@
         transition: none;
       }
     }
-    /* Hvit heldekkende bakgrunn når mobilmenyen er åpen */
-@media (max-width: 760px) {
-  .mobile-nav {
-    top: 66px;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    width: 100%;
-    min-height: calc(100vh - 66px);
-    padding: 70px 28px 40px;
-    background: #fffaf6;
-    border-right: 0;
-    box-shadow: none;
-  }
-
-  .menu-toggle:checked ~ .mobile-nav {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .mobile-nav a {
-    max-width: 620px;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
   </style>
 
 </head>
@@ -907,6 +994,7 @@
   <header class="mobile-header">
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
+```
 <label for="menu-toggle" class="menu-button" aria-label="Åpne og lukk meny">
   <span></span>
   <span></span>
@@ -917,11 +1005,12 @@
 
 <nav class="mobile-nav">
   <a href="#om-marianne">Om Marianne</a>
-  <a href="index.html#alfr">ÁLFR Nordlyskonsert</a>
-  <a href="index.html#concerts">Konserter</a>
+  <a href="index.html">ÁLFR Nordlyskonsert</a>
+  <a href="#konserter">Konserter</a>
   <a href="#video">Videoer</a>
   <a href="#booking">Kontakt</a>
 </nav>
+```
 
   </header>
 
@@ -931,6 +1020,7 @@
         <div class="hero-content">
           <div class="eyebrow">Sanger · solist · formidler</div>
 
+```
       <h1>Marianne Juvik Sæbø</h1>
 
       <p class="hero-lead">
@@ -1206,6 +1296,47 @@
   </div>
 </section>
 
+<section class="concerts" id="konserter">
+  <div class="wrap concerts-layout">
+    <div class="concerts-heading">
+      <h2>
+        Kommende konserter
+        <span>2026</span>
+      </h2>
+    </div>
+
+    <div class="event-list" aria-label="Konsertliste">
+      <article class="event-item">
+        <div class="event-date-box">
+          <span>29</span>
+          <small>Apr</small>
+        </div>
+
+        <div class="event-info">
+          <h3>ÁLFR — Northern Lights Concert</h3>
+          <p>19:00 &nbsp;&nbsp; Forum Scene Bergen, Norway</p>
+        </div>
+
+        <a href="index.html" class="event-link">Get tickets</a>
+      </article>
+
+      <article class="event-item">
+        <div class="event-date-box">
+          <span>+</span>
+          <small>Soon</small>
+        </div>
+
+        <div class="event-info">
+          <h3>Future concerts and projects</h3>
+          <p>Add new dates here when the programme is ready.</p>
+        </div>
+
+        <a href="#booking" class="event-link">Contact</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="booking">
   <div class="wrap contact-grid">
     <div class="contact-side">
@@ -1252,7 +1383,7 @@
     </div>
   </div>
 </section>
-
+```
 
   </main>
 
