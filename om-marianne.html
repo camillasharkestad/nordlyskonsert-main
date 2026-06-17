@@ -986,7 +986,7 @@
         transition: none;
       }
     }
-    /* Mobil: gjør Marianne-bildet til et rent banner */
+    /* Mobil: Marianne-bildet som ekte banner */
 @media (max-width: 760px) {
   .hero {
     padding-top: 66px;
@@ -1003,26 +1003,35 @@
   }
 
   .hero-image {
+    order: 1;
     width: 100%;
+    height: 46vh;
+    min-height: 360px;
+    max-height: 470px;
     margin: 0;
     padding: 0;
     background: #ffffff;
+    overflow: hidden;
     display: block;
   }
 
   .hero-image img {
     width: 100%;
+    height: 100%;
     max-width: none;
     margin: 0;
     display: block;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 28%;
+    transform: scale(1.18);
+    transform-origin: center top;
   }
 
   .hero-content {
+    order: 2;
     padding: 34px 24px 56px;
     background:
-      linear-gradient(180deg, #ffffff 0%, var(--bg) 18%, var(--bg) 100%);
+      linear-gradient(180deg, #ffffff 0%, #fbf4ed 20%, #fbf4ed 100%);
   }
 }
   </style>
