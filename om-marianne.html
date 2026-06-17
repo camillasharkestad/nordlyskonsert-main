@@ -872,6 +872,33 @@
         transition: none;
       }
     }
+    /* Hvit heldekkende bakgrunn når mobilmenyen er åpen */
+@media (max-width: 760px) {
+  .mobile-nav {
+    top: 66px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    min-height: calc(100vh - 66px);
+    padding: 70px 28px 40px;
+    background: #fffaf6;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  .menu-toggle:checked ~ .mobile-nav {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav a {
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
   </style>
 
 </head>
