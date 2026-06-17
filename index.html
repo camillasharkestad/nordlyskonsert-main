@@ -1,1442 +1,702 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html lang="no">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Om Marianne Juvik Sæbø | Sanger og solist</title>
-  <meta name="description" content="Om Marianne Juvik Sæbø – sanger, solist og formidler. Book Marianne til konsert, seremoni, bryllup, minnestund, festival og høytidelige arrangementer.">
-
-  <style>
-    :root {
-      --bg: #fbf4ed;
-      --cream: #fff8f3;
-      --white: #ffffff;
-      --rose: #b86e65;
-      --rose-light: #e7b9ae;
-      --brown: #4d352f;
-      --brown-soft: #7c665e;
-      --text: #261f1c;
-      --muted: #756862;
-      --line: rgba(77, 53, 47, 0.14);
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 36px));
-      margin: 0 auto;
-    }
-
-    .mobile-header {
-      display: none;
-    }
-
-    .menu-toggle {
-      display: none;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 18% 12%, rgba(184, 110, 101, 0.12), transparent 26%),
-        linear-gradient(135deg, #ffffff 0%, #fff8f3 58%, #f8e9e1 100%);
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -1px;
-      height: 70px;
-      background: linear-gradient(180deg, rgba(251,244,237,0), var(--bg));
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      width: min(1380px, calc(100% - 36px));
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      align-items: start;
-      gap: clamp(28px, 5vw, 78px);
-      padding: clamp(34px, 5vw, 72px) 0 0;
-    }
-
-    .hero-content {
-      padding-top: clamp(6px, 2vw, 34px);
-      padding-bottom: clamp(54px, 8vw, 110px);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      margin-bottom: 20px;
-      color: var(--rose);
-      font-size: 0.78rem;
-      letter-spacing: 0.17em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    h1 {
-      margin: 0;
-      max-width: 720px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(4rem, 8vw, 8.5rem);
-      line-height: 0.9;
-      font-weight: 400;
-      letter-spacing: -0.08em;
-      color: var(--brown);
-    }
-
-    .hero-lead {
-      margin: 28px 0 0;
-      max-width: 590px;
-      color: var(--brown-soft);
-      font-size: clamp(1.16rem, 2vw, 1.45rem);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 24px;
-      border-radius: 999px;
-      border: 1px solid var(--brown);
-      color: var(--brown);
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 900;
-      transition: 0.2s ease;
-    }
-
-    .button.primary {
-      background: var(--brown);
-      color: var(--white);
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-      background: var(--rose);
-      border-color: var(--rose);
-      color: var(--white);
-    }
-
-    .hero-image {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-      align-self: start;
-      margin-bottom: -12px;
-    }
-
-    .hero-image img {
-      width: min(100%, 760px);
-      height: auto;
-      object-fit: contain;
-      object-position: center top;
-    }
-
-    .intro {
-      padding: clamp(54px, 8vw, 108px) 0;
-      background: var(--bg);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(34px, 7vw, 90px);
-      align-items: start;
-    }
-
-    .intro-title {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--brown);
-      font-size: clamp(2.8rem, 5.8vw, 6.2rem);
-      line-height: 0.94;
-      letter-spacing: -0.075em;
-      font-weight: 400;
-    }
-
-    .intro-text {
-      color: var(--muted);
-      font-size: 1.08rem;
-      max-width: 650px;
-    }
-
-    .intro-text p:first-child {
-      margin-top: 0;
-    }
-
-    .intro-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    .section-head {
-      text-align: center;
-      max-width: 880px;
-      margin: 0 auto clamp(50px, 7vw, 82px);
-    }
-
-    .section-label {
-      color: var(--rose);
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--brown);
-      font-size: clamp(2.8rem, 7vw, 6.6rem);
-      line-height: 0.95;
-      letter-spacing: -0.075em;
-      font-weight: 400;
-    }
-
-    .section-subtitle {
-      margin: 24px auto 0;
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-
-    .history {
-      padding: clamp(72px, 10vw, 140px) 0;
-      background:
-        linear-gradient(180deg, var(--bg) 0%, #fff8f3 48%, var(--bg) 100%);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .story-list {
-      display: grid;
-      gap: clamp(56px, 8vw, 110px);
-    }
-
-    .story {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(30px, 6vw, 82px);
-      align-items: center;
-    }
-
-    .story:nth-child(even) .story-media {
-      order: 2;
-    }
-
-    .story-media {
-      position: relative;
-      min-height: 430px;
-      background:
-        linear-gradient(135deg, #f4ded7, #fff8f3);
-      border-radius: 34px;
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      color: var(--brown-soft);
-      text-align: center;
-      padding: 32px;
-    }
-
-    .story-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 430px;
-      object-fit: cover;
-      border-radius: 0;
-    }
-
-    .story-media.image-clean {
-      min-height: 0;
-      background: transparent;
-      border-radius: 0;
-      padding: 0;
-      overflow: visible;
-      display: block;
-    }
-
-    .story-media.image-clean img {
-      width: 100%;
-      height: auto;
-      min-height: 0;
-      object-fit: contain;
-      border-radius: 0;
-    }
-
-    .placeholder-text {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 900;
-      color: var(--rose);
-    }
-
-    .story-badge {
-      position: absolute;
-      left: 18px;
-      top: 18px;
-      background: rgba(255, 250, 246, 0.86);
-      border-radius: 999px;
-      padding: 10px 15px;
-      color: var(--brown);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 900;
-      backdrop-filter: blur(10px);
-    }
-
-    .story-copy h3 {
-      margin: 0 0 22px;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--brown);
-      font-size: clamp(2rem, 4vw, 4rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      font-weight: 400;
-    }
-
-    .story-copy p {
-      color: var(--muted);
-      margin: 0 0 18px;
-      font-size: 1.05rem;
-    }
-
-    .story-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .quote {
-      padding: clamp(70px, 10vw, 130px) 0;
-      background: var(--bg);
-      overflow: hidden;
-    }
-
-    .quote-text {
-      margin: 0 auto;
-      max-width: 980px;
-      text-align: center;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--brown);
-      font-size: clamp(2.3rem, 5.8vw, 6rem);
-      line-height: 0.98;
-      letter-spacing: -0.075em;
-    }
-
-    .quote-text span {
-      color: var(--rose);
-    }
-
-    .scroll-fade {
-      opacity: 0;
-      transform: translateY(28px);
-      filter: blur(8px);
-      transition:
-        opacity 1.2s ease,
-        transform 1.2s ease,
-        filter 1.2s ease;
-      will-change: opacity, transform, filter;
-    }
-
-    .scroll-fade.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
-
-    .music-section {
-      padding: clamp(72px, 10vw, 140px) 0;
-      background: #fff8f3;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .album-grid {
-      width: min(940px, 100%);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: clamp(30px, 5vw, 64px);
-      row-gap: clamp(54px, 7vw, 84px);
-    }
-
-    .album-card {
-      text-align: right;
-    }
-
-    .album-card img {
-      width: 100%;
-      max-width: 430px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      background: #f3dfd5;
-      margin-left: auto;
-    }
-
-    .album-card h3 {
-      margin: 14px 0 0;
-      color: var(--brown);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1rem, 1.5vw, 1.18rem);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .album-card p {
-      margin: 2px 0 0;
-      color: var(--brown);
-      font-size: clamp(1rem, 1.5vw, 1.18rem);
-      line-height: 1.25;
-      font-weight: 400;
-    }
-
-    .music-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: clamp(46px, 7vw, 76px);
-    }
-
-    .listen-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--brown);
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 900;
-      border-bottom: 1px solid rgba(77, 53, 47, 0.28);
-      padding-bottom: 6px;
-      transition: 0.2s ease;
-    }
-
-    .listen-link:hover {
-      color: var(--rose);
-      border-color: var(--rose);
-      transform: translateY(-2px);
-    }
-
-    .video-section {
-      padding: clamp(72px, 10vw, 135px) 0;
-      background: #fff8f3;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 34px;
-    }
-
-    .video-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #f3dfd5;
-      border-radius: 28px;
-    }
-
-    .video-frame iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .video-card h3 {
-      margin: 20px 0 8px;
-      color: var(--brown);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.8rem;
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-      font-weight: 400;
-    }
-
-    .video-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .concerts {
-      padding: clamp(64px, 9vw, 105px) 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .concerts-layout {
-      display: grid;
-      grid-template-columns: 0.55fr 1.45fr;
-      gap: clamp(36px, 7vw, 88px);
-      align-items: start;
-    }
-
-    .concerts-heading h2 {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.15;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      font-weight: 400;
-      color: var(--brown);
-    }
-
-    .concerts-heading h2 span {
-      display: block;
-      margin-top: 8px;
-      font-weight: 400;
-      letter-spacing: 0.16em;
-    }
-
-    .event-list {
-      display: grid;
-      gap: 28px;
-    }
-
-    .event-item {
-      display: grid;
-      grid-template-columns: 70px minmax(0, 1fr) 140px;
-      gap: 26px;
-      align-items: start;
-    }
-
-    .event-date-box {
-      padding-right: 20px;
-      border-right: 1px solid var(--line);
-      text-align: center;
-      color: var(--brown);
-      line-height: 1;
-    }
-
-    .event-date-box span {
-      display: block;
-      font-size: 1.7rem;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-
-    .event-date-box small {
-      display: block;
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .event-info h3 {
-      margin: 0 0 4px;
-      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-      font-weight: 900;
-      color: var(--brown);
-    }
-
-    .event-info p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.45;
-    }
-
-    .event-link {
-      justify-self: end;
-      align-self: start;
-      padding-bottom: 3px;
-      border-bottom: 1px solid currentColor;
-      color: var(--brown);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .event-link:hover {
-      color: var(--rose);
-    }
-
-    .contact {
-      padding: clamp(64px, 9vw, 105px) 0;
-      background: var(--bg);
-      border-top: 0;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.55fr 1.45fr;
-      gap: clamp(36px, 7vw, 88px);
-      align-items: start;
-    }
-
-    .contact-side h2 {
-      margin: 0 0 14px;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--brown);
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1;
-      letter-spacing: -0.04em;
-      font-weight: 900;
-    }
-
-    .contact-side p {
-      margin: 0;
-      max-width: 230px;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.55;
-    }
-
-    .contact-label {
-      margin-bottom: 18px;
-      color: var(--rose);
-      font-size: 0.76rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .contact-main h3 {
-      margin: 0;
-      max-width: 760px;
-      color: var(--brown);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.4rem, 4.8vw, 4.9rem);
-      line-height: 0.96;
-      letter-spacing: -0.075em;
-      font-weight: 400;
-    }
-
-    .contact-main p {
-      margin: 24px 0 34px;
-      max-width: 680px;
-      color: var(--muted);
-      font-size: clamp(1.02rem, 1.5vw, 1.16rem);
-      line-height: 1.6;
-    }
-
-    .contact-info {
-      display: grid;
-      gap: 16px;
-      max-width: 720px;
-      border-top: 0;
-    }
-
-    .contact-row {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 24px;
-      align-items: baseline;
-      padding: 0;
-      border-bottom: 0;
-    }
-
-    .contact-row span {
-      color: var(--rose);
-      font-size: 0.72rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .contact-row a,
-    .contact-row strong {
-      color: var(--brown);
-      font-size: clamp(1rem, 1.5vw, 1.18rem);
-      line-height: 1.25;
-      font-weight: 800;
-      border-bottom: 0;
-      text-decoration: none;
-      box-shadow: none;
-    }
-
-    .contact-row a:hover {
-      color: var(--rose);
-      border-bottom: 0;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 34px 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-      background: var(--bg);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .footer-inner a {
-      border-bottom: 1px solid rgba(117, 104, 98, 0.35);
-    }
-
-    .footer-inner a:hover {
-      color: var(--rose);
-      border-color: var(--rose);
-    }
-
-    @media (max-width: 980px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 0;
-        padding-top: 20px;
-      }
-
-      .hero-content {
-        order: 2;
-        padding: 28px 0 56px;
-      }
-
-      .hero-image {
-        order: 1;
-        justify-content: center;
-        margin-bottom: 0;
-      }
-
-      .hero-image img {
-        width: min(100%, 620px);
-      }
-
-      .intro-grid,
-      .story,
-      .video-grid,
-      .contact-grid,
-      .concerts-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .story:nth-child(even) .story-media {
-        order: 0;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .mobile-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 66px;
-        padding: 0 18px;
-        background: rgba(251, 244, 237, 0.94);
-        backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(77, 53, 47, 0.12);
-      }
-
-      .mobile-logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--brown);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.88rem;
-        font-weight: 400;
-        letter-spacing: 0.36em;
-        text-transform: uppercase;
-        line-height: 1;
-        white-space: nowrap;
-      }
-
-      .menu-button {
-        position: absolute;
-        left: 18px;
-        top: 50%;
-        z-index: 1002;
-        width: 42px;
-        height: 42px;
-        transform: translateY(-50%);
-        border: 0;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-        background: transparent;
-      }
-
-      .menu-button span {
-        position: absolute;
-        display: block;
-        width: 24px;
-        height: 1.5px;
-        background: var(--brown);
-        border-radius: 999px;
-        transition: transform 0.24s ease, opacity 0.18s ease;
-      }
-
-      .menu-button span:nth-child(1) {
-        transform: translateY(-7px);
-      }
-
-      .menu-button span:nth-child(2) {
-        transform: translateY(0);
-      }
-
-      .menu-button span:nth-child(3) {
-        transform: translateY(7px);
-      }
-
-      .mobile-nav {
-        position: fixed;
-        top: 66px;
-        left: 0;
-        right: 0;
-        bottom: auto;
-        z-index: 1001;
-        width: 100%;
-        min-height: calc(100vh - 66px);
-        padding: 70px 28px 40px;
-        background: #fffaf6;
-        border-right: 0;
-        box-shadow: none;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        transform: translateX(-104%);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform 0.28s ease, opacity 0.28s ease;
-      }
-
-      .mobile-nav a {
-        max-width: 620px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 15px 0;
-        color: var(--brown);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.86rem;
-        font-weight: 400;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        border-bottom: 1px solid rgba(77, 53, 47, 0.1);
-      }
-
-      .mobile-nav a:hover {
-        color: var(--rose);
-      }
-
-      .menu-toggle:checked ~ .mobile-nav {
-        transform: translateX(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .menu-toggle:checked + .menu-button span:nth-child(1) {
-        transform: translateY(0) rotate(45deg);
-      }
-
-      .menu-toggle:checked + .menu-button span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-toggle:checked + .menu-button span:nth-child(3) {
-        transform: translateY(0) rotate(-45deg);
-      }
-
-      .hero {
-        padding-top: 66px;
-      }
-
-      .hero-image {
-        width: calc(100% + 24px);
-        margin-left: -12px;
-        margin-right: -12px;
-        padding: 28px 12px 0;
-        background: #ffffff;
-      }
-
-      .hero-image img {
-        width: min(100%, 620px);
-        margin: 0 auto;
-      }
-
-      .album-grid {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 16px;
-        row-gap: 34px;
-      }
-
-      .album-card {
-        text-align: center;
-      }
-
-      .album-card img {
-        max-width: 100%;
-        margin-left: 0;
-      }
-
-      .album-card h3,
-      .album-card p {
-        font-size: 0.78rem;
-        line-height: 1.25;
-      }
-
-      .event-item {
-        grid-template-columns: 58px minmax(0, 1fr);
-        gap: 18px;
-      }
-
-      .event-link {
-        grid-column: 2;
-        justify-self: start;
-        margin-top: 4px;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .wrap,
-      .hero-inner {
-        width: min(100% - 24px, 1380px);
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .story-media {
-        min-height: 300px;
-        border-radius: 24px;
-      }
-
-      .story-media img {
-        min-height: 300px;
-      }
-
-      .story-media.image-clean {
-        min-height: 0;
-        border-radius: 0;
-      }
-
-      .story-media.image-clean img {
-        min-height: 0;
-      }
-
-      .video-frame {
-        border-radius: 22px;
-      }
-
-      .contact-row {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .scroll-fade {
-        opacity: 1;
-        transform: none;
-        filter: none;
-        transition: none;
-      }
-
-      .mobile-nav,
-      .menu-button span {
-        transition: none;
-      }
-    }
-  </style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Marianne Juvik Sæbø | ÁLFR Northern Lights Concert</title>
+  <meta
+    name="description"
+    content="The official home for Marianne Juvik Sæbø concerts and projects. Current focus: ÁLFR, a Northern Lights Concert at Forum Scene Bergen."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="mobile-header">
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header class="site-header">
+    <a href="#top" class="brand" aria-label="Marianne Juvik Sæbø home">
+      <span class="brand-name">Marianne Juvik Sæbø</span>
+      <span class="brand-tagline">Concerts & Projects</span>
+    </a>
 
 
-<label for="menu-toggle" class="menu-button" aria-label="Åpne og lukk meny">
+<input
+  type="checkbox"
+  id="nav-toggle"
+  class="nav-toggle"
+  aria-label="Toggle navigation"
+/>
+
+<label for="nav-toggle" class="nav-toggle-label">
   <span></span>
   <span></span>
   <span></span>
 </label>
 
-<a href="#om-marianne" class="mobile-logo">Marianne</a>
-
-<nav class="mobile-nav">
-  <a href="#om-marianne">Om Marianne</a>
-  <a href="index.html">ÁLFR Nordlyskonsert</a>
-  <a href="#konserter">Konserter</a>
-  <a href="#video">Videoer</a>
-  <a href="#booking">Kontakt</a>
+<nav class="nav" aria-label="Main navigation">
+  <a href="#alfr">ÁLFR</a>
+  <a href="#video">Video</a>
+  <a href="om-marianne.html">About Marianne</a>
+  <a href="#concerts">Concerts</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 
   </header>
 
-  <main>
-    <section class="hero" id="om-marianne" aria-label="Banner med Marianne Juvik Sæbø">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <div class="eyebrow">Sanger · solist · formidler</div>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
 
+  <div class="hero-panel">
+    <p class="eyebrow">Marianne Juvik Sæbø presents</p>
+    <h1 id="hero-title">ÁLFR</h1>
+    <p class="hero-subtitle">Northern Lights Concert</p>
 
-      <h1>Marianne Juvik Sæbø</h1>
-
-      <p class="hero-lead">
-        En varm, erfaren og allsidig stemme til konserter, seremonier og anledninger der musikken skal bety noe.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button primary" href="#historien">Les historien</a>
-        <a class="button" href="#booking">Kontakt</a>
+    <dl class="event-meta" aria-label="Featured concert details">
+      <div>
+        <dt>Date</dt>
+        <dd>29 April 2026</dd>
       </div>
-    </div>
 
-    <div class="hero-image">
-      <img
-        src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png"
-        alt="Marianne Juvik Sæbø">
+      <div>
+        <dt>Venue</dt>
+        <dd>Forum Scene Bergen</dd>
+      </div>
+    </dl>
+
+    <p class="hero-description">
+      A concert experience with beautiful music, cinematic visuals and the
+      magical atmosphere of the northern lights — a tribute to Norwegian
+      nature, light, darkness and sound.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#alfr-ticket" class="button">Buy tickets</a>
+      <a href="#video" class="text-link">Watch video</a>
     </div>
   </div>
 </section>
 
 <section class="intro">
-  <div class="wrap">
-    <div class="intro-grid">
-      <h2 class="intro-title">Musikk med nerve, varme og nærvær.</h2>
-
-      <div class="intro-text">
-        <p>
-          Marianne Juvik Sæbø er en norsk sanger og solist med solid musikalsk bakgrunn og et stort repertoar. Hun er utdannet ved Bergen Musikkonservatorium/Griegakademiet og Royal Academy of Music i London.
-        </p>
-
-        <p>
-          Hun beveger seg naturlig mellom klassisk musikk, salmer, folketoner, viser, jazz, musikal, gospel og opera. Enten hun synger i et kirkerom, på en scene eller i en høytidelig seremoni, skaper hun øyeblikk publikum husker.
-        </p>
-      </div>
-    </div>
-  </div>
+  <p class="section-kicker">A concert experience</p>
+  <h2>Music, nature and northern lights in one visual universe</h2>
+  <p>
+    ÁLFR combines beautiful music with spectacular images inspired by
+    northern lights, wild nature and Norwegian fairytale atmosphere.
+  </p>
 </section>
 
-<section class="history" id="historien">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-label">Historien til Marianne</div>
-      <h2>Fra Askøy til store scener.</h2>
-      <p class="section-subtitle">
-        Her kan du samle høydepunkter fra Mariannes karriere. Feltene under er midlertidige bildeplasser som du kan bytte ut med ekte bilder senere.
-      </p>
-    </div>
-
-    <div class="story-list">
-      <article class="story">
-        <div class="story-media">
-          <div class="story-badge">Kongen og Dronningen</div>
-          <div class="placeholder-text">Bytt til bilde fra anledningen</div>
-        </div>
-
-        <div class="story-copy">
-          <h3>Nystemten for Kongen og Dronningen</h3>
-          <p>
-            Et av de store øyeblikkene i Mariannes karriere var da hun sang <em>Nystemten</em> for Kongen og Dronningen. Slike oppdrag krever trygghet, presisjon og evnen til å bære en høytidelig stemning.
-          </p>
-          <p>
-            Marianne er en sanger som kan stå støtt i store øyeblikk, men samtidig formidle med varme og nærhet. Det gjør henne til et naturlig valg når musikken skal gi arrangementet verdighet og løft.
-          </p>
-        </div>
-      </article>
-
-      <article class="story">
-        <div class="story-media">
-          <div class="story-badge">Internasjonalt oppdrag</div>
-          <div class="placeholder-text">Bytt til bilde fra keiser-oppdrag</div>
-        </div>
-
-        <div class="story-copy">
-          <h3>Da Marianne sang for en keiser</h3>
-          <p>
-            Marianne har også hatt oppdrag av internasjonal karakter, blant annet en anledning der hun sang for en keiser. Dette er en historie som viser bredden i karrieren hennes og tilliten hun får i helt spesielle sammenhenger.
-          </p>
-          <p>
-            Når du legger inn riktig bilde, kan denne teksten gjerne spisses med sted, årstall og hvilken anledning det var. Slik blir historien enda mer konkret og eksklusiv.
-          </p>
-        </div>
-      </article>
-
-      <article class="story">
-        <div class="story-media">
-          <div class="story-badge">Konsertliv</div>
-          <div class="placeholder-text">Bytt til konsertbilde</div>
-        </div>
-
-        <div class="story-copy">
-          <h3>Solist med kor og orkestre</h3>
-          <p>
-            Marianne har vært solist med en rekke kor og orkestre, og hun har lang erfaring fra både små og store konsertprosjekter. Hun er trygg i møte med musikere, dirigenter, arrangører og publikum.
-          </p>
-          <p>
-            Repertoaret hennes gjør henne fleksibel: Hun kan levere et enkelt solistinnslag, en kirkekonsert, en større produksjon eller et program som skreddersys for anledningen.
-          </p>
-        </div>
-      </article>
-
-      <article class="story">
-        <div class="story-media image-clean">
-          <img
-            src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781020486/marianne_nluage.jpg"
-            alt="Marianne Juvik Sæbø – Álfr nordlyskonsert">
-        </div>
-
-        <div class="story-copy">
-          <h3>Álfr – en nordlyskonsert</h3>
-          <p>
-            I prosjektet <em>Álfr</em> møtes musikk, natur og visuelle uttrykk. Konserten er omtalt som en hyllest til nordlyset og til norsk natur, med vakker musikk, stillbilder og levende bilder.
-          </p>
-          <p>
-            Slike prosjekter viser Marianne som mer enn en solist. Hun er også en formidler og kunstnerisk drivkraft som kan skape en helhetlig opplevelse rundt musikken.
-          </p>
-        </div>
-      </article>
-
-      <article class="story">
-        <div class="story-media">
-          <div class="story-badge">Musikalhuset</div>
-          <div class="placeholder-text">Bytt til bilde fra Musikalhuset</div>
-        </div>
-
-        <div class="story-copy">
-          <h3>Formidlerglede for nye generasjoner</h3>
-          <p>
-            Ved siden av konsertvirksomheten driver Marianne Musikalhuset på Askøy, en musikkskole der barn og unge får utvikle sangglede, musikalitet og scenisk trygghet.
-          </p>
-          <p>
-            Arbeidet med unge talenter sier mye om Marianne som artist: Hun er opptatt av formidling, tilstedeværelse og det å gi musikken videre.
-          </p>
-        </div>
-      </article>
-
-      <article class="story">
-        <div class="story-media">
-          <div class="story-badge">Innspillinger</div>
-          <div class="placeholder-text">Bytt til albumbilde eller pressebilde</div>
-        </div>
-
-        <div class="story-copy">
-          <h3>Album, innspillinger og et bredt repertoar</h3>
-          <p>
-            Marianne har gitt ut flere egne album og medvirket på en rekke innspillinger. Repertoaret hennes spenner fra salmer og folketoner til jazz, gospel, musikal, klassiske verk og opera.
-          </p>
-          <p>
-            Den musikalske bredden gjør det lett å tilpasse oppdraget. Hun kan skape noe høytidelig, nært, lyst, sterkt eller storslått – alt etter hva arrangøren ønsker.
-          </p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="quote">
-  <div class="wrap">
-    <p class="quote-text scroll-fade">
-      En stemme med kraft og varme. <span>En formidler som får publikum til å lytte.</span>
+<section class="video-section" id="video">
+  <div class="video-copy">
+    <p class="section-kicker">Watch the atmosphere</p>
+    <h2>Video clip</h2>
+    <p>
+      Watch the trailer and get a glimpse of the atmosphere behind ÁLFR —
+      a Northern Lights Concert shaped by music, images and Nordic mystery.
     </p>
   </div>
+
+  <div class="video-frame video-frame-cover">
+    <button
+      class="video-poster"
+      type="button"
+      aria-label="Play ÁLFR video"
+      data-video-src="https://player.vimeo.com/video/1200059531?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1"
+    >
+      <img
+        src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781068556/vzrdk-RU_oxdzzo.jpg"
+        alt="ÁLFR video preview"
+      />
+
+      <span class="video-poster-overlay"></span>
+
+      <span class="video-play-button" aria-hidden="true">
+        <span></span>
+      </span>
+    </button>
+  </div>
 </section>
 
-<section class="music-section" id="musikk">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-label">Musikk og utgivelser</div>
-      <h2>Hør Marianne</h2>
-      <p class="section-subtitle">
-        Et utvalg innspillinger og musikkprosjekter. Lytt videre på Spotify.
-      </p>
-    </div>
+<section class="story" id="alfr">
+  <div class="story-image">
+    <img
+      src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781022045/517296206_10162813226630638_2905433184106180476_n_yg9gz9.jpg"
+      alt="Artist in Norwegian natural landscape"
+      loading="lazy"
+    />
+  </div>
 
-    <div class="album-grid">
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350875/1900x1900-000000-80-0-0_x64pbw.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
+ <div class="story-copy">
+  <p class="section-kicker">Current focus</p>
+  <h2>ÁLFR — a Northern Lights Concert</h2>
 
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350876/ab67616d0000b273ea378547231fdb3dd1b3e23b_o7ltrp.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
+  <p>
+    ÁLFR is a scenic concert experience where majestic music, spectacular
+    images and the magic of the northern lights meet.
+  </p>
 
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350879/ab67616d00001e0242ac5b9ec4ef706e50032ce7_xj1pdj.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
+  <p>
+    With visuals by Eilif Stene and music by Jørn Lavoll and Marianne Juvik
+    Sæbø, the concert is inspired by Norwegian nature, light and atmosphere.
+  </p>
 
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350881/images_aad9xn.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
+  <p>
+    The music will be performed by the Royal Norwegian Navy Band, pianist and
+    choir, conducted by Bjørn Sagstad. Marianne Juvik Sæbø is the vocalist.
+  </p>
 
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350883/R-14459998-1574963785-3644_ijdlze.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
+  <p>
+    Welcome to a unique experience at Forum Scene Bergen.
+  </p>
 
-      <article class="album-card">
-        <img
-          src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781350885/R-23689337-1656170835-4544_awubo8.jpg"
-          alt="Utgivelse med Marianne Juvik Sæbø">
-        <h3>Utgivelse</h3>
-        <p>Marianne Juvik Sæbø</p>
-      </article>
-    </div>
+  <div class="hero-actions">
+    <a href="#alfr-ticket" class="button">Buy tickets</a>
+   
+  </div>
+</div>
+</section>
 
-    <div class="music-actions">
-      <a class="listen-link" href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
-        Lytt til Marianne på Spotify
+<section class="about" id="about">
+  <div class="about-image">
+    <img
+      src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781082479/Marianne-Juvik-S%C3%A6b%C3%B8_e1zuak.jpg"
+      alt="Marianne Juvik Sæbø"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="about-copy">
+    <p class="section-kicker">About Marianne</p>
+    <h2>Marianne Juvik Sæbø</h2>
+
+  <p>
+  Marianne Juvik Sæbø is an experienced and versatile singer based in
+  Bergen/Askøy, known for her warm voice, musical presence and ability to
+  create moments that feel personal, beautiful and memorable.
+</p>
+
+<p>
+  With classical training from Bergen and London, she brings both quality and
+  sensitivity to every performance. Her repertoire ranges from hymns, folk music
+  and gospel to classical works, musical theatre and opera.
+</p>
+
+<p>
+  Marianne can be booked for concerts, church ceremonies, funerals, memorial
+  services and private events. She works closely with each client to choose music
+  that suits the occasion — whether the atmosphere should be solemn, comforting,
+  joyful or grand.
+</p>
+
+<p>
+  Her current spotlight is ÁLFR: a Nordic concert experience where music,
+  storytelling and visual landscapes meet in an atmospheric universe inspired by
+  nature and the northern lights.
+</p>
+
+    <p>
+      The current spotlight is ÁLFR: a concert concept where music,
+      storytelling and visual landscapes meet in a Nordic, atmospheric
+      universe.
+    </p>
+
+    <div class="about-actions">
+      <a href="om-marianne.html" class="button button-compact">
+        Read more about Marianne
       </a>
     </div>
   </div>
 </section>
 
-<section class="video-section" id="video">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-label">Se og hør Marianne</div>
-      <h2>Videoer og opptak</h2>
-      <p class="section-subtitle">
-        Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
+<section class="concerts" id="concerts">
+  <style>
+    #concerts {
+      background: #fbf7ed;
+      padding-top: clamp(4rem, 8vw, 7rem);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+    }
+
+    #concerts .concerts-layout {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: clamp(3rem, 7vw, 7rem);
+      align-items: start;
+    }
+
+    #concerts .concerts-heading {
+      margin: 0;
+      text-align: center;
+    }
+
+    #concerts .concerts-heading .section-kicker {
+      display: none;
+    }
+
+    #concerts .concerts-heading h2 {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      line-height: 1.25;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #001f2c;
+    }
+
+    #concerts .concerts-heading h2 span {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: clamp(1.9rem, 3vw, 2.35rem);
+      font-weight: 500;
+    }
+
+    #concerts .concerts-heading p {
+      display: none;
+    }
+
+    #concerts .event-list {
+      display: block;
+      margin: 0;
+    }
+
+    #concerts .event-item {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) 150px;
+      gap: 1.6rem;
+      align-items: start;
+      margin: 0 0 1.6rem;
+      padding: 0 0 0.1rem;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    #concerts .event-date-box {
+      width: auto;
+      height: auto;
+      min-width: 0;
+      padding: 0 1.35rem 0 0;
+      border: 0;
+      border-right: 1px solid rgba(0, 31, 44, 0.45);
+      border-radius: 0;
+      background: transparent;
+      color: #001f2c;
+      text-align: center;
+      line-height: 1;
+    }
+
+    #concerts .event-date-box span {
+      display: block;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.7rem;
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #001f2c;
+    }
+
+    #concerts .event-date-box small {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      line-height: 1.1;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #001f2c;
+    }
+
+    #concerts .event-info .event-type {
+      display: none;
+    }
+
+    #concerts .event-info h3 {
+      margin: 0 0 0.25rem;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+      line-height: 1.35;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #001f2c;
+    }
+
+    #concerts .event-info p {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.4;
+      color: #3f4650;
+    }
+
+    #concerts .event-link {
+      justify-self: end;
+      align-self: start;
+      margin-top: 0.05rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid #001f2c;
+      font-family: "Poppins", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #001f2c;
+      white-space: nowrap;
+    }
+
+    #concerts .event-link:hover {
+      color: var(--purple);
+      border-bottom-color: var(--purple);
+    }
+
+    #concerts .concert-contact {
+      max-width: 1180px;
+      margin: clamp(4rem, 7vw, 6rem) auto 0;
+      padding-top: clamp(2.8rem, 5vw, 4rem);
+      border-top: 1px solid rgba(0, 31, 44, 0.12);
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: clamp(2.5rem, 7vw, 6rem);
+      align-items: start;
+    }
+
+    #concerts .concert-contact-heading {
+      text-align: left;
+    }
+
+    #concerts .concert-contact-heading h2 {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      line-height: 1.15;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #001f2c;
+    }
+
+    #concerts .concert-contact-heading p {
+      display: block;
+      max-width: 300px;
+      margin: 1rem 0 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: rgba(0, 31, 44, 0.62);
+    }
+
+    #concerts .concert-contact-card {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      color: #001f2c;
+    }
+
+    #concerts .concert-contact-card::before {
+      display: none;
+    }
+
+    #concerts .contact-label {
+      margin: 0 0 0.9rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--purple);
+    }
+
+    #concerts .concert-contact-card h3 {
+      margin: 0 0 1.2rem;
+      max-width: 680px;
+      font-family: "Poppins", sans-serif;
+      font-size: clamp(1.8rem, 3.2vw, 3rem);
+      line-height: 1.12;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: #001f2c;
+    }
+
+    #concerts .concert-contact-card p {
+      max-width: 700px;
+      margin: 0 0 2rem;
+      font-size: clamp(1rem, 1.3vw, 1.08rem);
+      line-height: 1.75;
+      color: rgba(0, 31, 44, 0.72);
+    }
+
+    #concerts .contact-lines {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid rgba(0, 31, 44, 0.14);
+    }
+
+    #concerts .contact-line {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 31, 44, 0.14);
+      background: transparent;
+      border-radius: 0;
+    }
+
+    #concerts .contact-line strong {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(0, 31, 44, 0.48);
+    }
+
+    #concerts .contact-line a,
+    #concerts .contact-line span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #001f2c;
+    }
+
+    #concerts .contact-line a {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .atmosphere {
+      margin-top: 0;
+    }
+
+    .atmosphere .atmosphere-card {
+      text-align: left;
+    }
+
+    .atmosphere .section-kicker {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .atmosphere-card h2 {
+      margin-bottom: 1.2rem;
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: white;
+    }
+
+    .atmosphere-card p {
+      max-width: 680px;
+    }
+
+    .alfr-final-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .alfr-final-actions .button {
+      background: white;
+      color: #09071f;
+    }
+
+    .alfr-final-actions .button:hover {
+      background: var(--purple);
+      color: white;
+    }
+
+    .alfr-final-actions .text-link {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      #concerts .concerts-layout,
+      #concerts .concert-contact {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      #concerts .concerts-heading,
+      #concerts .concert-contact-heading {
+        text-align: left;
+        justify-content: flex-start;
+      }
+
+      #concerts .concert-contact-heading h2 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #concerts .event-item {
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      #concerts .event-date-box {
+        padding-right: 0.8rem;
+      }
+
+      #concerts .event-date-box span {
+        font-size: 1.45rem;
+      }
+
+      #concerts .event-date-box small {
+        font-size: 0.72rem;
+      }
+
+      #concerts .event-link {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 0.45rem;
+      }
+
+      #concerts .contact-line {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+    }
+  </style>
+
+  <div class="concerts-layout">
+    <div class="concerts-heading">
+      <p class="section-kicker">Concerts & assignments</p>
+      <h2>
+        Upcoming concerts
+        <span>2026</span>
+      </h2>
+      <p>
+        This section is ready for Marianne’s future concerts, commissioned
+        performances, collaborations and special projects. Until the full
+        overview is available, ÁLFR remains the highlighted event.
       </p>
     </div>
 
-    <div class="video-grid">
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/fUQjwzukokw"
-            title="Marianne Juvik Sæbø - video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <h3>Marianne live</h3>
-        <p>
-          Et eksempel på Mariannes varme og sceniske nærvær.
-        </p>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/VQDGixABPcA"
-            title="Marianne Juvik Sæbø - video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <h3>Et nært musikalsk uttrykk</h3>
-        <p>
-          Et opptak som viser Marianne i et mer nært og formidlende uttrykk.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="concerts" id="konserter">
-  <div class="wrap concerts-layout">
-    <div class="concerts-heading">
-      <h2>
-        Kommende konserter
-        <span>2026</span>
-      </h2>
-    </div>
-
-    <div class="event-list" aria-label="Konsertliste">
-      <article class="event-item">
+    <div class="event-list" aria-label="Concert list">
+      <article class="event-item event-item-featured">
         <div class="event-date-box">
           <span>29</span>
           <small>Apr</small>
         </div>
 
         <div class="event-info">
+          <p class="event-type">Featured concert</p>
           <h3>ÁLFR — Northern Lights Concert</h3>
           <p>19:00 &nbsp;&nbsp; Forum Scene Bergen, Norway</p>
         </div>
 
-        <a href="index.html" class="event-link">Get tickets</a>
+        <a href="#alfr-ticket" class="event-link">Get tickets</a>
       </article>
 
-      <article class="event-item">
-        <div class="event-date-box">
+      <article class="event-item event-item-muted">
+        <div class="event-date-box event-date-box-empty">
           <span>+</span>
           <small>Soon</small>
         </div>
 
         <div class="event-info">
+          <p class="event-type">More dates</p>
           <h3>Future concerts and projects</h3>
           <p>Add new dates here when the programme is ready.</p>
         </div>
 
-        <a href="#booking" class="event-link">Contact</a>
+        <a href="#contact" class="event-link">Contact</a>
       </article>
     </div>
   </div>
+
+  <div class="concert-contact" id="contact">
+  <div class="concert-contact-heading">
+    <h2>Contact</h2>
+    
+  </div>
+
+  <div class="concert-contact-card">
+    <h3>Book Marianne Juvik Sæbø</h3>
+
+
+<p>
+  For singing engagements, concerts, ceremonies, funerals or collaborations,
+  please get in touch to discuss the occasion, repertoire and practical details.
+</p>
+
+<div class="contact-lines">
+  <div class="contact-line">
+    <strong>Email</strong>
+    <a href="mailto:mail@marianne.no">mail@marianne.no</a>
+  </div>
+
+  <div class="contact-line">
+    <strong>Phone</strong>
+    <a href="tel:95806860">95806860</a>
+  </div>
+
+  <div class="contact-line">
+    <strong>Based in</strong>
+    <span>Bergen / Askøy, Norway</span>
+  </div>
+</div>
+
+
+  </div>
+</div>
 </section>
 
-<section class="contact" id="booking">
-  <div class="wrap contact-grid">
-    <div class="contact-side">
-      <h2>Kontakt</h2>
-      <p>
-        For booking og forespørsler.
-      </p>
-    </div>
+<section class="atmosphere" id="alfr-ticket" aria-labelledby="atmosphere-title">
+  <div class="atmosphere-card">
+    <p class="section-kicker">Forum Scene Bergen</p>
+    <h2 id="atmosphere-title">ÁLFR — 29 April 2026</h2>
+    <p>
+      Experience ÁLFR live in Bergen: a Northern Lights Concert with music,
+      visuals and Norwegian nature as its scenic universe.
+    </p>
 
-    <div class="contact-main">
-      <div class="contact-label">Booking</div>
 
-      <h3>
-        Book Marianne til konserter og seremonier.
-      </h3>
+<div class="alfr-final-actions">
+  <a href="#" class="button button-large">Buy tickets</a>
+  <a href="#contact" class="text-link">Contact enquiry</a>
+</div>
 
-      <p>
-        Ta kontakt for sangoppdrag, konserter, seremonier, begravelser eller samarbeid.
-      </p>
 
-      <div class="contact-info">
-        <div class="contact-row">
-          <span>E-post</span>
-          <a href="mailto:mail@marianne.no">mail@marianne.no</a>
-        </div>
-
-        <div class="contact-row">
-          <span>Telefon</span>
-          <a href="tel:+4795806860">958 06 860</a>
-        </div>
-
-        <div class="contact-row">
-          <span>Basert i</span>
-          <strong>Bergen / Askøy, Norge</strong>
-        </div>
-
-        <div class="contact-row">
-          <span>Spotify</span>
-          <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">
-            Lytt på Spotify
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+
   </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <div>© Marianne Juvik Sæbø</div>
-      <div>
-        958 06 860 · mail@marianne.no ·
-        <a href="https://open.spotify.com/artist/4wa090fi4INwSp9NUM6Z8h" target="_blank" rel="noopener">Spotify</a>
-      </div>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 Marianne Juvik Sæbø</p>
+    <a href="#top">Back to top</a>
   </footer>
 
   <script>
-    var fadeObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
+    document.querySelectorAll(".video-poster").forEach(function (poster) {
+      poster.addEventListener("click", function () {
+        var iframe = document.createElement("iframe");
+
+        iframe.src = poster.getAttribute("data-video-src");
+        iframe.title = "Alfr 15 songen fra farne tider";
+        iframe.allow = "autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share";
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.allowFullscreen = true;
+
+        var videoFrame = poster.closest(".video-frame");
+        videoFrame.innerHTML = "";
+        videoFrame.appendChild(iframe);
       });
-    }, {
-      threshold: 0.35
-    });
-
-    document.querySelectorAll(".scroll-fade").forEach(function (element) {
-      fadeObserver.observe(element);
-    });
-
-    var menuToggle = document.getElementById("menu-toggle");
-    var menuLinks = document.querySelectorAll(".mobile-nav a");
-
-    menuLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        menuToggle.checked = false;
-      });
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        menuToggle.checked = false;
-      }
     });
   </script>
 
