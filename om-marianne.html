@@ -344,6 +344,7 @@
     .quote {
       padding: clamp(70px, 10vw, 130px) 0;
       background: var(--bg);
+      overflow: hidden;
     }
 
     .quote-text {
@@ -359,6 +360,23 @@
 
     .quote-text span {
       color: var(--rose);
+    }
+
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(28px);
+      filter: blur(8px);
+      transition:
+        opacity 1.2s ease,
+        transform 1.2s ease,
+        filter 1.2s ease;
+      will-change: opacity, transform, filter;
+    }
+
+    .scroll-fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
     }
 
     .music-section {
@@ -697,6 +715,15 @@
         flex-direction: column;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-fade {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+      }
+    }
   </style>
 
 </head>
@@ -866,7 +893,7 @@
 
 <section class="quote">
   <div class="wrap">
-    <p class="quote-text">
+    <p class="quote-text scroll-fade">
       En stemme med kraft og varme. <span>En formidler som får publikum til å lytte.</span>
     </p>
   </div>
@@ -1043,5 +1070,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var fadeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    document.querySelectorAll(".scroll-fade").forEach(function (element) {
+      fadeObserver.observe(element);
+    });
+  </script>
+
 </body>
 </html>

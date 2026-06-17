@@ -1874,3 +1874,26 @@ box-shadow: none !important;
     gap: 4px;
   }
 }
+/* Gjør ÁLFR-tekstseksjonen mer kompakt */
+.story {
+  align-items: center;
+}
+
+.story-copy h2 {
+  font-size: clamp(2.1rem, 3.5vw, 3.6rem);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.story-copy p {
+  font-size: 1rem;
+  line-height: 1.58;
+}
+
+.story-copy p + p {
+  margin-top: 12px;
+}
+
+.story-copy .hero-actions {
+  margin-top: 28px;
+}
