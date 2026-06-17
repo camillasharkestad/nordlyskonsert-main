@@ -53,6 +53,16 @@
       margin: 0 auto;
     }
 
+    /* MOBILMENY */
+
+    .mobile-header {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -654,29 +664,130 @@
       }
     }
 
-   @media (max-width: 760px) {
-  .album-grid {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    row-gap: 34px;
-  }
+    @media (max-width: 760px) {
+      .mobile-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+        background: rgba(251, 244, 237, 0.92);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(77, 53, 47, 0.12);
+      }
 
-  .album-card {
-    text-align: center;
-  }
+      .mobile-logo {
+        color: var(--brown);
+        font-size: 0.9rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+      }
 
-  .album-card img {
-    max-width: 100%;
-    margin-left: 0;
-  }
+      .menu-button {
+        width: 44px;
+        height: 40px;
+        border: 1px solid rgba(77, 53, 47, 0.18);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        background: rgba(255, 248, 243, 0.86);
+      }
 
-  .album-card h3,
-  .album-card p {
-    font-size: 0.78rem;
-    line-height: 1.25;
-  }
-}
+      .menu-button span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--brown);
+        border-radius: 999px;
+        transition: 0.2s ease;
+      }
+
+      .menu-button span + span {
+        margin-top: -11px;
+      }
+
+      .mobile-nav {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 18px;
+        right: 18px;
+        display: grid;
+        gap: 4px;
+        padding: 12px;
+        background: var(--cream);
+        border: 1px solid rgba(77, 53, 47, 0.14);
+        border-radius: 22px;
+        box-shadow: 0 22px 54px rgba(77, 53, 47, 0.16);
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition: 0.2s ease;
+      }
+
+      .mobile-nav a {
+        padding: 13px 14px;
+        border-radius: 14px;
+        color: var(--brown);
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .mobile-nav a:hover {
+        background: rgba(184, 110, 101, 0.1);
+        color: var(--rose);
+      }
+
+      .menu-toggle:checked ~ .mobile-nav {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle:checked + .menu-button span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .album-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+        row-gap: 34px;
+      }
+
+      .album-card {
+        text-align: center;
+      }
+
+      .album-card img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      .album-card h3,
+      .album-card p {
+        font-size: 0.78rem;
+        line-height: 1.25;
+      }
+    }
 
     @media (max-width: 680px) {
       .wrap,
@@ -737,11 +848,33 @@
 </head>
 
 <body>
+  <header class="mobile-header">
+    <a href="#om-marianne" class="mobile-logo">Marianne Juvik Sæbø</a>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+<label for="menu-toggle" class="menu-button" aria-label="Åpne meny">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+<nav class="mobile-nav">
+  <a href="#om-marianne">Om Marianne</a>
+  <a href="index.html#alfr">ÁLFR Nordlyskonsert</a>
+  <a href="index.html#concerts">Konserter</a>
+  <a href="#video">Videoer</a>
+  <a href="#booking">Kontakt</a>
+</nav>
+
+  </header>
+
   <main>
-    <section class="hero" aria-label="Banner med Marianne Juvik Sæbø">
+    <section class="hero" id="om-marianne" aria-label="Banner med Marianne Juvik Sæbø">
       <div class="hero-inner">
         <div class="hero-content">
           <div class="eyebrow">Sanger · solist · formidler</div>
+
 
       <h1>Marianne Juvik Sæbø</h1>
 
@@ -1064,7 +1197,6 @@
     </div>
   </div>
 </section>
-
 
   </main>
 
