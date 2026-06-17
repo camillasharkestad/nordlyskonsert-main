@@ -986,6 +986,45 @@
         transition: none;
       }
     }
+    /* Mobil: gjør Marianne-bildet til et rent banner */
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 66px;
+    background: var(--bg);
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-inner {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    display: block;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-content {
+    padding: 34px 24px 56px;
+    background:
+      linear-gradient(180deg, #ffffff 0%, var(--bg) 18%, var(--bg) 100%);
+  }
+}
   </style>
 
 </head>
