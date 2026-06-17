@@ -2015,3 +2015,44 @@ box-shadow: none !important;
     pointer-events: auto;
   }
 }
+/* Mindre ÁLFR-ticket-boks på mobil */
+@media (max-width: 760px) {
+  .atmosphere {
+    min-height: 620px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 18px 48px;
+  }
+
+  .atmosphere-card {
+    width: 100%;
+    padding: 28px 26px !important;
+    border-radius: 28px !important;
+    background: rgba(8, 10, 24, 0.72) !important;
+    backdrop-filter: blur(12px);
+  }
+
+  .atmosphere-card .section-kicker,
+  .atmosphere-card p,
+  .alfr-final-actions .text-link {
+    display: none !important;
+  }
+
+  .atmosphere-card h2 {
+    margin: 0 0 22px !important;
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .alfr-final-actions {
+    margin-top: 0 !important;
+  }
+
+  .alfr-final-actions .button {
+    width: 100%;
+    min-height: 56px;
+    background: white !important;
+    color: #09071f !important;
+  }
+}
