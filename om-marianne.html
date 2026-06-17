@@ -1034,6 +1034,52 @@
       linear-gradient(180deg, #ffffff 0%, #fbf4ed 20%, #fbf4ed 100%);
   }
 }
+/* MOBIL: Marianne-bilde som ekte banner */
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 66px !important;
+    background: var(--bg) !important;
+  }
+
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero-inner {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-image-banner {
+    order: 1 !important;
+    width: 100% !important;
+    height: 44vh !important;
+    min-height: 340px !important;
+    max-height: 440px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    background-image: url("https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 118% auto !important;
+    background-position: center top !important;
+  }
+
+  .hero-image-banner img {
+    display: none !important;
+  }
+
+  .hero-content {
+    order: 2 !important;
+    padding: 34px 24px 56px !important;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbf4ed 18%,
+      #fbf4ed 100%
+    ) !important;
+  }
+}
   </style>
 
 </head>
@@ -1078,11 +1124,7 @@
       </div>
     </div>
 
-    <div class="hero-image">
-      <img
-        src="https://res.cloudinary.com/ddr47lhck/image/upload/v1781169224/marianne_skwzxk.png"
-        alt="Marianne Juvik Sæbø">
-    </div>
+    <div class="hero-image hero-image-banner" aria-label="Marianne Juvik Sæbø"></div>
   </div>
 </section>
 
