@@ -2056,3 +2056,17 @@ box-shadow: none !important;
     color: #09071f !important;
   }
 }
+/* Gjør ALFR-tittelen enda mindre på mobil */
+@media (max-width: 760px) {
+  .atmosphere-card h2,
+  .atmosphere-card #atmosphere-title {
+    font-size: 1.65rem !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.02em !important;
+    max-width: 100% !important;
+  }
+
+  .atmosphere-card {
+    padding: 24px 22px !important;
+  }
+}
