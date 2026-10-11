@@ -50,10 +50,10 @@ a {
 }
 
 [id] {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 112px;
 }
 
-@media (min-width: 1241px) {
+@media (min-width: 1381px) {
   .site-header {
     position: sticky;
     top: 0;
@@ -62,7 +62,7 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    height: 88px;
+    height: 100px;
     padding: 0 clamp(22px, 4vw, 64px);
     background: rgba(251, 244, 237, 0.92);
     backdrop-filter: blur(14px);
@@ -77,7 +77,7 @@ a {
 
   .brand {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.5rem, 2.2vw, 1.85rem);
     letter-spacing: -0.03em;
     color: var(--brown);
     white-space: nowrap;
@@ -90,13 +90,13 @@ a {
   .site-nav {
     display: flex;
     align-items: center;
-    gap: clamp(16px, 2vw, 28px);
+    gap: clamp(18px, 2.2vw, 34px);
     margin-left: auto;
   }
 
   .site-nav a {
     color: var(--brown);
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 900;
@@ -109,7 +109,7 @@ a {
   }
 
   .site-nav .nav-alfr {
-    padding: 12px 20px;
+    padding: 14px 24px;
     border: 1px solid var(--rose);
     border-radius: 999px;
     color: var(--rose);
@@ -1117,6 +1117,35 @@ footer {
 
 }
 
+/* Mellomstore skjermer: litt tettere meny så alt får plass på én linje */
+@media (min-width: 1381px) and (max-width: 1640px) {
+  .site-header {
+    padding: 0 32px;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .site-nav {
+    gap: 18px;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-nav .nav-alfr {
+    padding: 12px 18px;
+  }
+
+  .lang-current {
+    padding: 10px 13px 10px 12px;
+    font-size: 0.8rem;
+  }
+}
+
 /* Språkvelger: knapp med nedtrekksliste og flagg */
 .lang-switch {
   position: relative;
@@ -1127,15 +1156,15 @@ footer {
 .lang-current {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   margin: 0;
-  padding: 10px 14px 10px 12px;
+  padding: 12px 16px 12px 14px;
   border: 1px solid rgba(77, 53, 47, 0.28);
   border-radius: 999px;
   background: transparent;
   color: var(--brown);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1158,8 +1187,8 @@ footer {
 .lang-flag {
   display: inline-flex;
   flex: none;
-  width: 18px;
-  height: 13px;
+  width: 22px;
+  height: 16px;
   border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 0 0 1px rgba(77, 53, 47, 0.14);
@@ -1225,7 +1254,7 @@ footer {
 }
 
 /* Topplinje med hamburgermeny (mobil og nettbrett) */
-@media (max-width: 1240px) {
+@media (max-width: 1380px) {
   .lang-switch {
     position: absolute;
     right: 12px;
