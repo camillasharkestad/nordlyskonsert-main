@@ -93,7 +93,7 @@ a {
     align-items: center;
     gap: 22px;
     margin-left: auto;
-    padding: 12px 20px;
+    padding: 12px 18px;
     border: 1px solid rgba(77, 53, 47, 0.16);
     border-radius: 999px;
     background: rgba(255, 250, 246, 0.72);
@@ -107,9 +107,10 @@ a {
   .site-nav a {
     color: var(--brown);
     font-size: 0.78rem;
-    letter-spacing: 0.14em;
+    line-height: 1;
+    letter-spacing: 1.7px;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 800;
     white-space: nowrap;
     transition: color 0.2s ease, background 0.2s ease;
   }
