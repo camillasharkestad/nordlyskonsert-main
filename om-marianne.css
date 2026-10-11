@@ -481,7 +481,7 @@ h2 {
   width: min(100%, 520px);
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 0;
 }
 
 .story-media.image-clean.image-fill img {
@@ -1106,7 +1106,7 @@ footer {
   .story-media.image-clean.image-fill {
     width: 100%;
     aspect-ratio: 16 / 10;
-    border-radius: 22px;
+    border-radius: 0;
   }
 
   .story-media.image-clean.image-fill img {
