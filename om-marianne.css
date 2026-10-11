@@ -62,7 +62,7 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    height: 100px;
+    height: 104px;
     padding: 0 clamp(22px, 4vw, 64px);
     background: rgba(251, 244, 237, 0.92);
     backdrop-filter: blur(14px);
@@ -77,7 +77,7 @@ a {
 
   .brand {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.5rem, 2.2vw, 1.85rem);
+    font-size: clamp(1.65rem, 2.2vw, 1.9rem);
     letter-spacing: -0.03em;
     color: var(--brown);
     white-space: nowrap;
@@ -96,7 +96,7 @@ a {
 
   .site-nav a {
     color: var(--brown);
-    font-size: 0.9rem;
+    font-size: 0.94rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 900;
@@ -1117,32 +1117,26 @@ footer {
 
 }
 
-/* Mellomstore skjermer: litt tettere meny så alt får plass på én linje */
+/* Mellomstore skjermer: samme størrelse, men bare flagget i språkvelgeren så alt får plass */
 @media (min-width: 1381px) and (max-width: 1640px) {
   .site-header {
-    padding: 0 32px;
-  }
-
-  .brand {
-    font-size: 1.5rem;
+    padding: 0 28px;
   }
 
   .site-nav {
-    gap: 18px;
-  }
-
-  .site-nav a {
-    font-size: 0.82rem;
-    letter-spacing: 0.12em;
+    gap: 20px;
   }
 
   .site-nav .nav-alfr {
-    padding: 12px 18px;
+    padding: 14px 20px;
   }
 
   .lang-current {
-    padding: 10px 13px 10px 12px;
-    font-size: 0.8rem;
+    padding: 11px 13px 11px 12px;
+  }
+
+  .lang-current .lang-label {
+    display: none;
   }
 }
 
