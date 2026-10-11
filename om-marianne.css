@@ -50,10 +50,10 @@ a {
 }
 
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 1241px) {
   .site-header {
     position: sticky;
     top: 0;
@@ -62,8 +62,8 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    height: 72px;
-    padding: 0 clamp(18px, 3vw, 44px);
+    height: 88px;
+    padding: 0 clamp(22px, 4vw, 64px);
     background: rgba(251, 244, 237, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -77,7 +77,7 @@ a {
 
   .brand {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     letter-spacing: -0.03em;
     color: var(--brown);
     white-space: nowrap;
@@ -96,7 +96,7 @@ a {
 
   .site-nav a {
     color: var(--brown);
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 900;
@@ -109,7 +109,7 @@ a {
   }
 
   .site-nav .nav-alfr {
-    padding: 10px 18px;
+    padding: 12px 20px;
     border: 1px solid var(--rose);
     border-radius: 999px;
     color: var(--rose);
@@ -1127,13 +1127,13 @@ footer {
   align-items: center;
   gap: 8px;
   margin: 0;
-  padding: 8px 12px 8px 10px;
+  padding: 10px 14px 10px 12px;
   border: 1px solid rgba(77, 53, 47, 0.28);
   border-radius: 999px;
   background: transparent;
   color: var(--brown);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1223,7 +1223,7 @@ footer {
 }
 
 /* Topplinje med hamburgermeny (mobil og nettbrett) */
-@media (max-width: 1100px) {
+@media (max-width: 1240px) {
   .lang-switch {
     position: absolute;
     right: 12px;
