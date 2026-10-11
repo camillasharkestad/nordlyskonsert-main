@@ -105,13 +105,10 @@ opacity: 0.78;
 
 .nav {
 display: flex;
+align-items: center;
 gap: 22px;
-padding: 12px 18px;
-border: 1px solid var(--line);
-border-radius: 999px;
-background: rgba(4, 8, 22, 0.44);
-backdrop-filter: blur(16px);
-box-shadow: 0 12px 34px rgba(0, 0, 0, 0.2);
+padding: 12px 0;
+text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
 }
 
 .nav a {
