@@ -298,10 +298,11 @@ h1 {
   padding: clamp(22px, 3vw, 40px);
   border-radius: 34px;
   background:
-    radial-gradient(circle at 85% 15%, rgba(184, 110, 101, 0.28), transparent 40%),
-    linear-gradient(135deg, #4d352f 0%, #35241f 100%);
-  color: #fff6f0;
-  box-shadow: 0 28px 70px rgba(77, 53, 47, 0.22);
+    radial-gradient(circle at 82% 18%, rgba(177, 128, 255, 0.34), transparent 42%),
+    radial-gradient(circle at 8% 92%, rgba(103, 243, 162, 0.12), transparent 36%),
+    linear-gradient(135deg, #47306f 0%, #2a1d4d 55%, #1b1538 100%);
+  color: #f4efff;
+  box-shadow: 0 28px 70px rgba(43, 29, 80, 0.3);
 }
 
 .aktuelt-media img {
@@ -320,7 +321,7 @@ h1 {
   margin-bottom: 16px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: var(--rose);
+  background: #8a63d9;
   color: #ffffff;
   font-size: 0.72rem;
   letter-spacing: 0.2em;
@@ -329,14 +330,14 @@ h1 {
 }
 
 .aktuelt-copy h2 {
-  color: #fff6f0;
+  color: #f4efff;
   font-size: clamp(2.2rem, 4.2vw, 3.8rem);
   line-height: 0.98;
 }
 
 .aktuelt-meta {
   margin: 14px 0 18px;
-  color: var(--rose-light);
+  color: #c9b3ff;
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -344,7 +345,7 @@ h1 {
 }
 
 .aktuelt-copy p {
-  color: rgba(255, 246, 240, 0.84);
+  color: rgba(244, 239, 255, 0.84);
   font-size: 1.04rem;
   margin: 0 0 16px;
 }
@@ -354,20 +355,20 @@ h1 {
 }
 
 .button.light {
-  background: #fff6f0;
-  border-color: #fff6f0;
-  color: var(--brown);
+  background: #f4efff;
+  border-color: #f4efff;
+  color: #2a1d4d;
 }
 
 .button.ghost-light {
-  border-color: rgba(255, 246, 240, 0.5);
-  color: #fff6f0;
+  border-color: rgba(244, 239, 255, 0.5);
+  color: #f4efff;
 }
 
 .button.light:hover,
 .button.ghost-light:hover {
-  background: var(--rose);
-  border-color: var(--rose);
+  background: #8a63d9;
+  border-color: #8a63d9;
   color: #ffffff;
 }
 
