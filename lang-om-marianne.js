@@ -1,4 +1,4 @@
-/* Oversettelser for om-marianne.html. Norsk er standardspråket og ligger i selve HTML-filen.
+/* Oversettelser for index.html (Om Marianne, forsiden). Norsk er standardspråket og ligger i selve HTML-filen.
    Nøklene tilsvarer data-i18n-attributtene i HTML-en. */
 window.SITE_I18N = {
   defaultLanguage: "no",

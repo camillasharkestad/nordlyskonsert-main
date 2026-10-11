@@ -1,6 +1,6 @@
 /* Språkvelger for nettsiden.
    Bytter teksten i alle elementer med data-i18n ut fra ordlistene i window.SITE_I18N
-   (se lang-index.js og lang-om-marianne.js). Valget lagres i nettleseren og gjelder
+   (se lang-alfr.js og lang-om-marianne.js). Valget lagres i nettleseren og gjelder
    begge sidene. Lenker kan også tvinge et språk med ?lang=de, ?lang=en osv.
    Menyen bygges som en knapp med nedtrekksliste og små flagg (SVG). */
 (function () {
