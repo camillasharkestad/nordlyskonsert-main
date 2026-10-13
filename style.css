@@ -1688,3 +1688,136 @@ padding: 10px 8px;
 background: rgba(184, 110, 101, 0.12);
 }
 }
+
+/* LYTT, PROMO OG GALLERI (ÁLFR) */
+
+.listen-section {
+width: min(1180px, calc(100% - 44px));
+margin: 42px auto 0;
+padding: 36px 42px;
+border: 1px solid var(--line);
+border-radius: 34px;
+background:
+radial-gradient(circle at bottom right, rgba(225, 140, 255, 0.12), transparent 22rem),
+linear-gradient(145deg, rgba(15, 27, 57, 0.86), rgba(24, 16, 45, 0.88));
+box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+gap: 42px;
+align-items: center;
+}
+
+.listen-copy h2 {
+font-family: "Poppins", "Inter", Arial, sans-serif;
+font-size: clamp(1.8rem, 3.2vw, 3rem);
+line-height: 1.08;
+margin: 14px 0 16px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.01em;
+}
+
+.listen-copy p:not(.section-kicker) {
+color: var(--muted-white);
+line-height: 1.75;
+font-size: 1.05rem;
+margin: 0;
+}
+
+.listen-player audio {
+width: 100%;
+display: block;
+}
+
+.listen-credit {
+margin: 12px 0 0;
+color: var(--muted-white);
+font-size: 0.86rem;
+}
+
+.video-section-promo {
+margin-top: 42px;
+}
+
+.alfr-gallery {
+width: min(1180px, calc(100% - 44px));
+margin: 0 auto 120px;
+}
+
+.alfr-gallery-head {
+margin-bottom: 28px;
+}
+
+.alfr-gallery-head h2 {
+font-family: "Poppins", "Inter", Arial, sans-serif;
+font-size: clamp(1.8rem, 3.2vw, 3rem);
+line-height: 1.08;
+margin: 14px 0 0;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.01em;
+}
+
+.alfr-gallery-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 22px;
+}
+
+.alfr-gallery-grid figure {
+margin: 0;
+}
+
+.alfr-gallery-grid img {
+width: 100%;
+height: auto;
+aspect-ratio: 3 / 2;
+object-fit: cover;
+display: block;
+border-radius: 24px;
+box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+}
+
+.alfr-gallery-grid .alfr-gallery-wide {
+grid-column: 1 / -1;
+}
+
+.alfr-gallery-grid .alfr-gallery-wide img {
+aspect-ratio: 1600 / 828;
+}
+
+.alfr-gallery-grid figcaption {
+margin-top: 10px;
+color: var(--muted-white);
+font-size: 0.88rem;
+line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+.listen-section {
+width: calc(100% - 28px);
+margin-top: 28px;
+padding: 22px;
+border-radius: 24px;
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.video-section-promo {
+margin-top: 28px;
+}
+
+.alfr-gallery {
+width: calc(100% - 28px);
+margin-bottom: 74px;
+}
+
+.alfr-gallery-grid {
+grid-template-columns: 1fr;
+gap: 18px;
+}
+
+.alfr-gallery-grid img {
+border-radius: 18px;
+}
+}

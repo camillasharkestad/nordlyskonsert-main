@@ -36,7 +36,7 @@
     href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="style.css?v=20261011i" />
+  <link rel="stylesheet" href="style.css?v=20261013a" />
 
   <style>
     .mobile-index-logo {
@@ -291,6 +291,7 @@
 <nav class="nav" aria-label="Main navigation">
   <a href="#alfr">ÁLFR</a>
   <a href="#video" data-i18n="nav.video">Video</a>
+  <a href="#listen" data-i18n="nav.listen">Listen</a>
   <a href="index.html" data-i18n="nav.about">About Marianne</a>
   <a href="#concerts" data-i18n="nav.concerts">Concerts</a>
   <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -376,6 +377,39 @@
   </div>
 </section>
 
+<section class="listen-section" id="listen" aria-labelledby="listen-title">
+  <div class="listen-copy">
+    <p class="section-kicker" data-i18n="listen.kicker">Listen to the music</p>
+    <h2 id="listen-title" data-i18n="listen.title">ÁLFR medley</h2>
+    <p data-i18n="listen.p">
+      A short medley that gives you a taste of the music in ÁLFR — a Northern Lights Concert.
+    </p>
+  </div>
+
+  <div class="listen-player">
+    <audio controls preload="none" aria-label="ÁLFR medley" data-i18n-attr="aria-label:listen.label">
+      <source src="media/alfr-medley.mp3" type="audio/mpeg" />
+    </audio>
+    <p class="listen-credit" data-i18n="listen.credit">Music by Jørn Lavoll and Marianne Juvik Sæbø</p>
+  </div>
+</section>
+
+<section class="video-section video-section-promo" id="promo">
+  <div class="video-copy">
+    <p class="section-kicker" data-i18n="promo.kicker">Promo</p>
+    <h2 data-i18n="promo.title">ÁLFR promo</h2>
+    <p data-i18n="promo.p">
+      Northern lights, Norwegian nature and the music of ÁLFR in a two-minute promo video.
+    </p>
+  </div>
+
+  <div class="video-frame">
+    <video controls preload="none" playsinline poster="images/alfr/alfr-promo-poster.jpg" aria-label="ÁLFR promo video" data-i18n-attr="aria-label:promo.label">
+      <source src="media/alfr-promo.mp4" type="video/mp4" />
+    </video>
+  </div>
+</section>
+
 <section class="story" id="alfr">
   <div class="story-image">
     <img
@@ -411,6 +445,28 @@
     <div class="hero-actions">
       <a href="#alfr-ticket" class="button" data-i18n="cta.buy">Buy tickets</a>
     </div>
+  </div>
+</section>
+
+<section class="alfr-gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="alfr-gallery-head">
+    <p class="section-kicker" data-i18n="gallery.kicker">From the stage</p>
+    <h2 id="gallery-title" data-i18n="gallery.title">ÁLFR at KIPO 2026</h2>
+  </div>
+
+  <div class="alfr-gallery-grid">
+    <figure>
+      <img src="images/alfr/kipo-2026-nordlys.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="ÁLFR at KIPO: northern lights on the big screen above the band and choir" data-i18n-attr="alt:gallery.alt1" />
+      <figcaption data-i18n="gallery.c1">ÁLFR at KIPO 2026 (Photo: FranksFoto)</figcaption>
+    </figure>
+    <figure>
+      <img src="images/alfr/kipo-2026-mane.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="ÁLFR at KIPO: a full moon on the screen above the band and choir" data-i18n-attr="alt:gallery.alt2" />
+      <figcaption data-i18n="gallery.c2">ÁLFR at KIPO 2026 (Photo: FranksFoto)</figcaption>
+    </figure>
+    <figure class="alfr-gallery-wide">
+      <img src="images/alfr/alfr-skog.jpg" width="1600" height="828" loading="lazy" decoding="async" alt="Marianne Juvik Sæbø in a misty forest, from the visual universe of ÁLFR" data-i18n-attr="alt:gallery.alt3" />
+      <figcaption data-i18n="gallery.c3">From the visual universe of ÁLFR</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -968,7 +1024,7 @@
     });
   </script>
 
-  <script src="lang-alfr.js?v=20261011i"></script>
-  <script src="i18n.js?v=20261011i"></script>
+  <script src="lang-alfr.js?v=20261013a"></script>
+  <script src="i18n.js?v=20261013a"></script>
 </body>
 </html>
