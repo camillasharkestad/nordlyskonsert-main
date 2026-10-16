@@ -604,7 +604,7 @@ h2 {
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 22px;
+  border-radius: 0;
   background: #f3dfd5;
 }
 
@@ -1410,7 +1410,7 @@ footer {
   }
 
   .gallery-item img {
-    border-radius: 16px;
+    border-radius: 0;
   }
 
   .gallery-item figcaption {
