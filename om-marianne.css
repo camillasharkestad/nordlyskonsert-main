@@ -2449,7 +2449,7 @@ h2,
 .projects-hero h1,
 .project-title {
   font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -2476,7 +2476,7 @@ h2 {
 }
 
 .album-card h3 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .concerts-heading h2,
@@ -2486,7 +2486,7 @@ h2 {
 
 .event-info h3 {
   font-size: clamp(1.1rem, 1.7vw, 1.35rem);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
 }
 
