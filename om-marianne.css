@@ -2571,3 +2571,26 @@ h2 {
     aspect-ratio: auto;
   }
 }
+
+/* ---------- Knappene i «Kommende konserter»: avrundet som menyen, i roségull som navnet ----------
+   Gradienten er dobbelt så høy som knappen: øverste halvdel vises normalt,
+   og den mørkere nederste halvdelen glir inn ved hover. */
+
+.upcoming-button {
+  padding: 0 24px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #cf9184 0%, #b06a5f 50%, #8f544b 100%);
+  background-size: 100% 200%;
+  background-position: 0 0;
+  box-shadow: 0 6px 16px rgba(176, 106, 95, 0.22);
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(80, 40, 34, 0.28);
+  transition: background-position 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.upcoming-button:hover {
+  background: linear-gradient(180deg, #cf9184 0%, #b06a5f 50%, #8f544b 100%);
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  box-shadow: 0 8px 20px rgba(143, 84, 75, 0.28);
+}
