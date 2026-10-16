@@ -2430,3 +2430,110 @@ footer {
     transition: none;
   }
 }
+
+/* ---------- Overskrifter: klassisk antikva i store bokstaver ---------- */
+
+h2,
+.story-copy h3,
+.video-card h3,
+.album-card h3,
+.concerts-heading h2,
+.event-info h3,
+.contact-side h2,
+.contact-main h3,
+.upcoming-title,
+.upcoming-card h3,
+.program-card-title,
+.program-hero h1,
+.program-option h3,
+.projects-hero h1,
+.project-title {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
+  line-height: 1.12;
+}
+
+.program-head h2 {
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.15;
+}
+
+.story-copy h3 {
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: 0.06em;
+}
+
+.video-card h3 {
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+
+.album-card h3 {
+  font-weight: 600;
+}
+
+.concerts-heading h2,
+.contact-side h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.event-info h3 {
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.contact-main h3 {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.upcoming-title {
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+}
+
+.upcoming-card h3 {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  line-height: 1.2;
+}
+
+.program-card-title {
+  font-size: 1.2rem;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+.program-hero h1,
+.projects-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.08;
+}
+
+.program-text h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+}
+
+.program-facts h2 {
+  font-size: 1.5rem;
+}
+
+.program-others h2 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+.program-option h3 {
+  font-size: 1.2rem;
+}
+
+.project-title {
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  line-height: 1.1;
+}
