@@ -2547,6 +2547,7 @@ h2 {
 .upcoming-card {
   padding: 0 18px 24px;
   border-radius: 4px;
+  aspect-ratio: 1 / 1;
 }
 
 .upcoming-date {
@@ -2563,4 +2564,10 @@ h2 {
 .upcoming-card p {
   margin-bottom: 16px;
   line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .upcoming-card {
+    aspect-ratio: auto;
+  }
 }
