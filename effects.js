@@ -20,6 +20,7 @@
     ".intro-grid",
     ".story",
     ".program-card",
+    ".upcoming-card",
     ".gallery-item",
     ".album-card",
     ".video-card",

@@ -2031,3 +2031,138 @@ footer {
   font-size: clamp(2.4rem, 5vw, 4.6rem);
   line-height: 1;
 }
+
+
+/* ---------- Kommende konserter (rett under banneret) ---------- */
+
+.upcoming {
+  padding: clamp(40px, 6vw, 80px) 0 clamp(48px, 7vw, 90px);
+  background: var(--bg);
+}
+
+.upcoming-title {
+  margin: 0 0 clamp(48px, 6vw, 72px);
+  text-align: center;
+  font-family: "Cinzel Decorative", Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--brown);
+}
+
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 40px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.upcoming-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px 34px;
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f4e4da 0%, var(--cream) 100%);
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(77, 53, 47, 0.07);
+}
+
+/* Kalenderbladet stikker litt opp over kortet */
+.upcoming-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin: -26px 0 26px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 10px 26px rgba(77, 53, 47, 0.14);
+}
+
+.upcoming-month {
+  width: 100%;
+  padding: 7px 0 6px;
+  background: var(--rose);
+  color: var(--white);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.upcoming-day {
+  padding: 8px 0 0;
+  color: var(--text);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.upcoming-day-text {
+  padding-top: 18px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.upcoming-weekday {
+  padding: 6px 0 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.upcoming-card h3 {
+  margin: 0 0 6px;
+  color: var(--brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.upcoming-card p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.upcoming-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin-top: auto;
+  padding: 0 34px;
+  border-radius: 999px;
+  background: var(--brown);
+  color: var(--white);
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.02rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.upcoming-button:hover {
+  background: var(--rose);
+  transform: translateY(-2px);
+}
+
+.upcoming-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(36px, 5vw, 56px);
+}
+
+@media (max-width: 860px) {
+  .upcoming-grid {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+    gap: 34px;
+  }
+}
