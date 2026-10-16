@@ -1596,7 +1596,7 @@ footer {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 22px;
+  border-radius: 0;
   background: var(--cream);
   border: 1px solid var(--line);
   box-shadow: 0 18px 44px rgba(77, 53, 47, 0.08);
