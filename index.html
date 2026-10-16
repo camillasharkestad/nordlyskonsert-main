@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="om-marianne.css?v=20261016v">
+  <link rel="stylesheet" href="om-marianne.css?v=20261016w">
 
   <script>
     try {
@@ -64,7 +64,7 @@
     <nav class="site-nav" aria-label="Hovedmeny">
       <a href="om-marianne.html" data-i18n="nav.about">Om Marianne</a>
       <a href="#cd" data-i18n="nav.cds">CD-er</a>
-      <a href="#video" data-i18n="nav.videos">Videoer</a>
+      <a href="om-marianne.html#video" data-i18n="nav.videos">Videoer</a>
       <a href="#konserter" data-i18n="nav.concerts">Konserter</a>
       <a href="#booking" data-i18n="nav.contact">Kontakt</a>
       <div class="lang-switch" data-lang-switch></div>
@@ -329,84 +329,6 @@
   </div>
 </section>
 
-<section class="video-section" id="video">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-label" data-i18n="video.kicker">Se og hør Marianne</div>
-      <h2 data-i18n="video.title">Videoer og opptak</h2>
-      <p class="section-subtitle" data-i18n="video.lead">
-        Her kan du legge inn YouTube-videoer av Marianne. Videoene under kan byttes ut med de opptakene du ønsker å fremheve.
-      </p>
-    </div>
-
-    <div class="video-grid">
-      <article class="video-card">
-        <div class="video-frame">
-          <button
-            class="video-poster"
-            type="button"
-            aria-label="Spill av video: Marianne live"
-            data-i18n-attr="aria-label:video1.play"
-            data-video-src="https://www.youtube-nocookie.com/embed/fUQjwzukokw?autoplay=1&amp;rel=0"
-            data-video-title="Marianne Juvik Sæbø – Marianne live">
-            <img src="images/video-marianne-live.jpg" width="640" height="360" loading="lazy" decoding="async" alt="">
-            <span class="video-play" aria-hidden="true"></span>
-            <span class="video-hint" aria-hidden="true" data-i18n="video.hint">Se video</span>
-          </button>
-        </div>
-        <h3 data-i18n="video1.title">Marianne live</h3>
-        <p data-i18n="video1.p">
-          Et eksempel på Mariannes varme og sceniske nærvær.
-        </p>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <button
-            class="video-poster"
-            type="button"
-            aria-label="Spill av video: Et nært musikalsk uttrykk"
-            data-i18n-attr="aria-label:video2.play"
-            data-video-src="https://www.youtube-nocookie.com/embed/VQDGixABPcA?autoplay=1&amp;rel=0"
-            data-video-title="Marianne Juvik Sæbø – Ved et alter">
-            <img src="images/video-ved-et-alter.jpg" width="960" height="540" loading="lazy" decoding="async" alt="">
-            <span class="video-play" aria-hidden="true"></span>
-            <span class="video-hint" aria-hidden="true" data-i18n="video.hint">Se video</span>
-          </button>
-        </div>
-        <h3 data-i18n="video2.title">Et nært musikalsk uttrykk</h3>
-        <p data-i18n="video2.p">
-          Et opptak som viser Marianne i et mer nært og formidlende uttrykk.
-        </p>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <video controls preload="none" playsinline poster="images/alfr/alfr-promo-poster.jpg" aria-label="ÁLFR – en nordlyskonsert, promovideo" data-i18n-attr="aria-label:video3.label">
-            <source src="media/alfr-promo.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h3 data-i18n="video3.title">ÁLFR – en nordlyskonsert</h3>
-        <p data-i18n="video3.p">
-          Promovideo for ÁLFR, der musikk møter bilder av nordlys og norsk natur.
-        </p>
-      </article>
-
-      <article class="video-card">
-        <div class="video-frame">
-          <video controls preload="none" playsinline poster="images/studio/cd-promo-poster.jpg" aria-label="Promo for CD-en Ei ørlita kvile" data-i18n-attr="aria-label:video4.label">
-            <source src="media/ei-orlita-kvile-promo.mp4" type="video/mp4">
-          </video>
-        </div>
-        <h3 data-i18n="video4.title">Ei ørlita kvile</h3>
-        <p data-i18n="video4.p">
-          Promo for CD-en Ei ørlita kvile med Marianne og pianist Vidar Eldholm, gitt ut i 2016.
-        </p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section class="concerts" id="konserter">
   <div class="wrap concerts-layout">
     <div class="concerts-heading">
@@ -536,22 +458,6 @@
       fadeObserver.observe(element);
     });
 
-    document.querySelectorAll(".video-poster").forEach(function (poster) {
-      poster.addEventListener("click", function () {
-        var iframe = document.createElement("iframe");
-        iframe.src = poster.getAttribute("data-video-src");
-        iframe.title = poster.getAttribute("data-video-title") || "Video";
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-        iframe.referrerPolicy = "strict-origin-when-cross-origin";
-        iframe.allowFullscreen = true;
-
-        var frame = poster.closest(".video-frame");
-        frame.classList.add("is-playing");
-        frame.innerHTML = "";
-        frame.appendChild(iframe);
-      });
-    });
-
     var menuToggle = document.getElementById("menu-toggle");
     var menuLinks = document.querySelectorAll(".site-nav a");
 
@@ -567,9 +473,9 @@
       }
     });
   </script>
-  <script src="effects.js?v=20261016v"></script>
-  <script src="lang-om-marianne.js?v=20261016v"></script>
-  <script src="i18n.js?v=20261016v"></script>
+  <script src="effects.js?v=20261016w"></script>
+  <script src="lang-om-marianne.js?v=20261016w"></script>
+  <script src="i18n.js?v=20261016w"></script>
 
 </body>
 </html>
