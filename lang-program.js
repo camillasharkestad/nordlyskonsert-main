@@ -1,0 +1,349 @@
+/* Oversettelser for sidene om konsertprogrammene (maria-magdalena.html, haugtussa.html,
+   ord-og-draum.html og arv.html). Norsk er standardspråket og ligger i selve HTML-filen.
+   "shared" gjelder alle sidene, "pages" bare siden som har samme data-page på <html>. */
+(function () {
+  var shared = {
+    "en": {
+      "menu.label": "Open and close menu",
+      "nav.about": "About Marianne",
+      "nav.music": "Music",
+      "nav.videos": "Videos",
+      "nav.concerts": "Concerts",
+      "nav.contact": "Contact",
+      "nav.alfr": "ÁLFR",
+      "contact.title": "Contact",
+      "contact.p": "For bookings and enquiries.",
+      "contact.label": "Booking",
+      "contact.h3": "Book Marianne for concerts and ceremonies.",
+      "contact.lead": "Get in touch about singing engagements, concerts, ceremonies, funerals or collaborations.",
+      "contact.email": "Email",
+      "contact.phone": "Phone",
+      "contact.based": "Based in",
+      "contact.basedValue": "Askøy, Norway",
+      "aktuelt.title": "ÁLFR – a Northern Lights Concert",
+      "aktuelt.kicker": "Now",
+      "nav.cds": "CDs",
+      "prog.back": "← All concert programmes",
+      "prog.kicker": "Concert programme",
+      "prog.about": "About the programme",
+      "prog.facts": "Facts",
+      "prog.othersKicker": "More concert programmes",
+      "prog.othersTitle": "Other concerts you can book",
+      "prog.contactLead": "Get in touch to bring the programme to your venue, or to hear more about line-up, repertoire and practical details.",
+      "prog.more": "Read more",
+      "fact.vocals": "Vocals",
+      "fact.music": "Music",
+      "fact.lyrics": "Lyrics",
+      "fact.newSongs": "New songs and arrangements",
+      "fact.director": "Director",
+      "fact.performed": "Also performed",
+      "fact.album": "Album",
+      "fact.recordedWith": "Recorded with",
+      "fact.type": "Type",
+      "card.mm": "Text coming soon.",
+      "card.ht": "Marianne's own staged version of Grieg and Garborg's Haugtussa, with sampled sounds from nature.",
+      "card.od": "Lyrics by Olav H. Hauge and Jakob Sande, with music by Per Indrehus.",
+      "card.arv": "A hymn concert with male choir and chamber orchestra, or with pianist and a wind player.",
+      "card.alfr": "Beautiful music meets spectacular images of the northern lights and Norwegian nature."
+    },
+    "de": {
+      "menu.label": "Menü öffnen und schließen",
+      "nav.about": "Über Marianne",
+      "nav.music": "Musik",
+      "nav.videos": "Videos",
+      "nav.concerts": "Konzerte",
+      "nav.contact": "Kontakt",
+      "nav.alfr": "ÁLFR",
+      "contact.title": "Kontakt",
+      "contact.p": "Für Buchungen und Anfragen.",
+      "contact.label": "Buchung",
+      "contact.h3": "Buchen Sie Marianne für Konzerte und Zeremonien.",
+      "contact.lead": "Kontaktieren Sie uns für Gesangsauftritte, Konzerte, Zeremonien, Trauerfeiern oder Kooperationen.",
+      "contact.email": "E-Mail",
+      "contact.phone": "Telefon",
+      "contact.based": "Ansässig in",
+      "contact.basedValue": "Askøy, Norwegen",
+      "aktuelt.title": "ÁLFR – ein Nordlichtkonzert",
+      "aktuelt.kicker": "Aktuell",
+      "nav.cds": "CDs",
+      "prog.back": "← Alle Konzertprogramme",
+      "prog.kicker": "Konzertprogramm",
+      "prog.about": "Über das Programm",
+      "prog.facts": "Fakten",
+      "prog.othersKicker": "Weitere Konzertprogramme",
+      "prog.othersTitle": "Weitere Konzerte zum Buchen",
+      "prog.contactLead": "Nehmen Sie Kontakt auf, um das Programm an Ihren Ort zu holen, oder um mehr über Besetzung, Repertoire und praktische Details zu erfahren.",
+      "prog.more": "Mehr erfahren",
+      "fact.vocals": "Gesang",
+      "fact.music": "Musik",
+      "fact.lyrics": "Text",
+      "fact.newSongs": "Neue Lieder und Arrangements",
+      "fact.director": "Regie",
+      "fact.performed": "Auch aufgeführt",
+      "fact.album": "Album",
+      "fact.recordedWith": "Aufgenommen mit",
+      "fact.type": "Art",
+      "card.mm": "Text folgt.",
+      "card.ht": "Mariannes eigene szenische Fassung von Griegs und Garborgs Haugtussa, mit gesampelten Naturklängen.",
+      "card.od": "Texte von Olav H. Hauge und Jakob Sande, Musik von Per Indrehus.",
+      "card.arv": "Ein Choralkonzert mit Männerchor und Kammerorchester oder mit Pianist und einem Bläser.",
+      "card.alfr": "Wunderschöne Musik trifft auf spektakuläre Bilder von Nordlichtern und norwegischer Natur."
+    },
+    "fr": {
+      "menu.label": "Ouvrir et fermer le menu",
+      "nav.about": "À propos de Marianne",
+      "nav.music": "Musique",
+      "nav.videos": "Vidéos",
+      "nav.concerts": "Concerts",
+      "nav.contact": "Contact",
+      "nav.alfr": "ÁLFR",
+      "contact.title": "Contact",
+      "contact.p": "Pour les réservations et demandes.",
+      "contact.label": "Réservation",
+      "contact.h3": "Réservez Marianne pour vos concerts et cérémonies.",
+      "contact.lead": "Contactez-nous pour des prestations de chant, concerts, cérémonies, obsèques ou collaborations.",
+      "contact.email": "E-mail",
+      "contact.phone": "Téléphone",
+      "contact.based": "Basée à",
+      "contact.basedValue": "Askøy, Norvège",
+      "aktuelt.title": "ÁLFR – un concert des aurores boréales",
+      "aktuelt.kicker": "Actualité",
+      "nav.cds": "CD",
+      "prog.back": "← Tous les programmes de concert",
+      "prog.kicker": "Programme de concert",
+      "prog.about": "À propos du programme",
+      "prog.facts": "En bref",
+      "prog.othersKicker": "Autres programmes de concert",
+      "prog.othersTitle": "D'autres concerts à réserver",
+      "prog.contactLead": "Contactez-nous pour accueillir ce programme chez vous, ou pour en savoir plus sur la formation, le répertoire et les détails pratiques.",
+      "prog.more": "En savoir plus",
+      "fact.vocals": "Chant",
+      "fact.music": "Musique",
+      "fact.lyrics": "Textes",
+      "fact.newSongs": "Nouvelles chansons et arrangements",
+      "fact.director": "Mise en scène",
+      "fact.performed": "Également joué",
+      "fact.album": "Album",
+      "fact.recordedWith": "Enregistré avec",
+      "fact.type": "Genre",
+      "card.mm": "Texte à venir.",
+      "card.ht": "La version scénique de Marianne de Haugtussa de Grieg et Garborg, avec des sons de la nature samplés.",
+      "card.od": "Textes d'Olav H. Hauge et de Jakob Sande, sur une musique de Per Indrehus.",
+      "card.arv": "Un concert de cantiques avec chœur d'hommes et orchestre de chambre, ou avec pianiste et un instrument à vent.",
+      "card.alfr": "Une musique magnifique rencontre des images spectaculaires d'aurores boréales et de nature norvégienne."
+    },
+    "es": {
+      "menu.label": "Abrir y cerrar el menú",
+      "nav.about": "Sobre Marianne",
+      "nav.music": "Música",
+      "nav.videos": "Vídeos",
+      "nav.concerts": "Conciertos",
+      "nav.contact": "Contacto",
+      "nav.alfr": "ÁLFR",
+      "contact.title": "Contacto",
+      "contact.p": "Para contrataciones y consultas.",
+      "contact.label": "Contratación",
+      "contact.h3": "Contrata a Marianne para conciertos y ceremonias.",
+      "contact.lead": "Ponte en contacto para actuaciones, conciertos, ceremonias, funerales o colaboraciones.",
+      "contact.email": "Correo",
+      "contact.phone": "Teléfono",
+      "contact.based": "Con sede en",
+      "contact.basedValue": "Askøy, Noruega",
+      "aktuelt.title": "ÁLFR – un concierto de auroras boreales",
+      "aktuelt.kicker": "Ahora",
+      "nav.cds": "CD",
+      "prog.back": "← Todos los programas de concierto",
+      "prog.kicker": "Programa de concierto",
+      "prog.about": "Sobre el programa",
+      "prog.facts": "Datos",
+      "prog.othersKicker": "Más programas de concierto",
+      "prog.othersTitle": "Otros conciertos que puedes contratar",
+      "prog.contactLead": "Ponte en contacto para llevar el programa a tu escenario o para saber más sobre la formación, el repertorio y los detalles prácticos.",
+      "prog.more": "Leer más",
+      "fact.vocals": "Voz",
+      "fact.music": "Música",
+      "fact.lyrics": "Letra",
+      "fact.newSongs": "Nuevas canciones y arreglos",
+      "fact.director": "Dirección escénica",
+      "fact.performed": "También interpretado",
+      "fact.album": "Álbum",
+      "fact.recordedWith": "Grabado con",
+      "fact.type": "Tipo",
+      "card.mm": "Texto próximamente.",
+      "card.ht": "La versión escénica de Marianne de Haugtussa de Grieg y Garborg, con sonidos de la naturaleza sampleados.",
+      "card.od": "Textos de Olav H. Hauge y Jakob Sande, con música de Per Indrehus.",
+      "card.arv": "Un concierto de himnos con coro masculino y orquesta de cámara, o con pianista y un instrumento de viento.",
+      "card.alfr": "La música hermosa se une a imágenes espectaculares de auroras boreales y de la naturaleza noruega."
+    }
+  };
+  var pages = {
+    "maria-magdalena": {
+      "en": {
+        "meta.title": "Maria Magdalena | Marianne Juvik Sæbø",
+        "meta.description": "Maria Magdalena – a concert programme with Marianne Juvik Sæbø.",
+        "page.lead": "Text coming soon.",
+        "page.p1": "Text coming soon.",
+        "page.book": "Book Maria Magdalena"
+      },
+      "de": {
+        "meta.title": "Maria Magdalena | Marianne Juvik Sæbø",
+        "meta.description": "Maria Magdalena – ein Konzertprogramm mit Marianne Juvik Sæbø.",
+        "page.lead": "Text folgt.",
+        "page.p1": "Text folgt.",
+        "page.book": "Maria Magdalena buchen"
+      },
+      "fr": {
+        "meta.title": "Maria Magdalena | Marianne Juvik Sæbø",
+        "meta.description": "Maria Magdalena – un programme de concert avec Marianne Juvik Sæbø.",
+        "page.lead": "Texte à venir.",
+        "page.p1": "Texte à venir.",
+        "page.book": "Réserver Maria Magdalena"
+      },
+      "es": {
+        "meta.title": "Maria Magdalena | Marianne Juvik Sæbø",
+        "meta.description": "Maria Magdalena – un programa de concierto con Marianne Juvik Sæbø.",
+        "page.lead": "Texto próximamente.",
+        "page.p1": "Texto próximamente.",
+        "page.book": "Contratar Maria Magdalena"
+      }
+    },
+    "haugtussa": {
+      "en": {
+        "meta.title": "Haugtussa | Marianne Juvik Sæbø",
+        "meta.description": "Haugtussa – Marianne Juvik Sæbø's own staged version of Grieg and Garborg's song cycle.",
+        "page.lead": "Marianne's own staged version of Haugtussa (Grieg and Garborg), given a modernised musical setting where sampled sounds from nature are used as an expressive device.",
+        "page.p1": "Haugtussa is Arne Garborg's cycle of poems about Veslemøy, set to music by Edvard Grieg. In Marianne's staged version the songs have been given a modernised musical setting, where sampled sounds from nature are used as an expressive device.",
+        "page.p2": "Vidar Eldholm has composed several new songs and arranged the music. The production is directed by Erik Ulfsby.",
+        "page.p3": "The production was also performed in New York in 2011.",
+        "page.book": "Book Haugtussa"
+      },
+      "de": {
+        "meta.title": "Haugtussa | Marianne Juvik Sæbø",
+        "meta.description": "Haugtussa – Marianne Juvik Sæbøs eigene szenische Fassung des Liederzyklus von Grieg und Garborg.",
+        "page.lead": "Mariannes eigene szenische Fassung von Haugtussa (Grieg und Garborg) in einem modernisierten musikalischen Gewand, in dem gesampelte Naturklänge als Ausdrucksmittel dienen.",
+        "page.p1": "Haugtussa ist Arne Garborgs Gedichtzyklus über Veslemøy, vertont von Edvard Grieg. In Mariannes szenischer Fassung haben die Lieder ein modernisiertes musikalisches Gewand erhalten, in dem gesampelte Naturklänge als Ausdrucksmittel dienen.",
+        "page.p2": "Vidar Eldholm hat mehrere neue Lieder komponiert und die Musik arrangiert. Regie führt Erik Ulfsby.",
+        "page.p3": "Die Aufführung wurde 2011 auch in New York gezeigt.",
+        "page.book": "Haugtussa buchen"
+      },
+      "fr": {
+        "meta.title": "Haugtussa | Marianne Juvik Sæbø",
+        "meta.description": "Haugtussa – la version scénique de Marianne Juvik Sæbø du cycle de mélodies de Grieg et Garborg.",
+        "page.lead": "La version scénique de Marianne de Haugtussa (Grieg et Garborg), dans un habillage musical modernisé où des sons de la nature samplés servent de moyen d'expression.",
+        "page.p1": "Haugtussa est le cycle de poèmes d'Arne Garborg sur Veslemøy, mis en musique par Edvard Grieg. Dans la version scénique de Marianne, les mélodies ont reçu un habillage musical modernisé où des sons de la nature samplés servent de moyen d'expression.",
+        "page.p2": "Vidar Eldholm a composé plusieurs nouvelles chansons et arrangé la musique. La mise en scène est signée Erik Ulfsby.",
+        "page.p3": "Le spectacle a également été présenté à New York en 2011.",
+        "page.book": "Réserver Haugtussa"
+      },
+      "es": {
+        "meta.title": "Haugtussa | Marianne Juvik Sæbø",
+        "meta.description": "Haugtussa – la versión escénica de Marianne Juvik Sæbø del ciclo de canciones de Grieg y Garborg.",
+        "page.lead": "La versión escénica de Marianne de Haugtussa (Grieg y Garborg), con un envoltorio musical modernizado en el que se usan sonidos de la naturaleza sampleados como recurso expresivo.",
+        "page.p1": "Haugtussa es el ciclo de poemas de Arne Garborg sobre Veslemøy, con música de Edvard Grieg. En la versión escénica de Marianne, las canciones han recibido un envoltorio musical modernizado en el que se usan sonidos de la naturaleza sampleados como recurso expresivo.",
+        "page.p2": "Vidar Eldholm ha compuesto varias canciones nuevas y ha arreglado la música. La dirección escénica es de Erik Ulfsby.",
+        "page.p3": "El espectáculo también se presentó en Nueva York en 2011.",
+        "page.book": "Contratar Haugtussa"
+      }
+    },
+    "ord-og-draum": {
+      "en": {
+        "meta.title": "Ord og Draum | Marianne Juvik Sæbø",
+        "meta.description": "Ord og Draum – an atmospheric programme with lyrics by Olav H. Hauge and Jakob Sande and music by Per Indrehus.",
+        "page.lead": "An atmospheric programme with lyrics by Olav H. Hauge and Jakob Sande. The music is composed by Per Indrehus.",
+        "page.p1": "In Ord og Draum two of the great poets of Western Norway, Olav H. Hauge and Jakob Sande, meet in an atmospheric concert programme. The music is composed by Per Indrehus.",
+        "page.p2": "Ord og Draum has also been released as an album with Marianne Juvik Sæbø and Bergen Unge Kammerorkester.",
+        "page.book": "Book Ord og Draum"
+      },
+      "de": {
+        "meta.title": "Ord og Draum | Marianne Juvik Sæbø",
+        "meta.description": "Ord og Draum – ein stimmungsvolles Programm mit Texten von Olav H. Hauge und Jakob Sande und Musik von Per Indrehus.",
+        "page.lead": "Ein stimmungsvolles Programm mit Texten von Olav H. Hauge und Jakob Sande. Die Musik stammt von Per Indrehus.",
+        "page.p1": "In Ord og Draum begegnen sich zwei der großen Dichter Westnorwegens, Olav H. Hauge und Jakob Sande, in einem stimmungsvollen Konzertprogramm. Die Musik stammt von Per Indrehus.",
+        "page.p2": "Ord og Draum ist auch als Album mit Marianne Juvik Sæbø und Bergen Unge Kammerorkester erschienen.",
+        "page.book": "Ord og Draum buchen"
+      },
+      "fr": {
+        "meta.title": "Ord og Draum | Marianne Juvik Sæbø",
+        "meta.description": "Ord og Draum – un programme plein d'atmosphère sur des textes d'Olav H. Hauge et de Jakob Sande et une musique de Per Indrehus.",
+        "page.lead": "Un programme plein d'atmosphère sur des textes d'Olav H. Hauge et de Jakob Sande. La musique est composée par Per Indrehus.",
+        "page.p1": "Dans Ord og Draum, deux grands poètes de l'ouest de la Norvège, Olav H. Hauge et Jakob Sande, se rencontrent dans un programme de concert plein d'atmosphère. La musique est composée par Per Indrehus.",
+        "page.p2": "Ord og Draum est également paru en album avec Marianne Juvik Sæbø et le Bergen Unge Kammerorkester.",
+        "page.book": "Réserver Ord og Draum"
+      },
+      "es": {
+        "meta.title": "Ord og Draum | Marianne Juvik Sæbø",
+        "meta.description": "Ord og Draum – un programa lleno de ambiente con textos de Olav H. Hauge y Jakob Sande y música de Per Indrehus.",
+        "page.lead": "Un programa lleno de ambiente con textos de Olav H. Hauge y Jakob Sande. La música es de Per Indrehus.",
+        "page.p1": "En Ord og Draum se encuentran dos de los grandes poetas del oeste de Noruega, Olav H. Hauge y Jakob Sande, en un programa de concierto lleno de ambiente. La música es de Per Indrehus.",
+        "page.p2": "Ord og Draum también se ha publicado como álbum con Marianne Juvik Sæbø y Bergen Unge Kammerorkester.",
+        "page.book": "Contratar Ord og Draum"
+      }
+    },
+    "arv": {
+      "en": {
+        "meta.title": "Arv | Marianne Juvik Sæbø",
+        "meta.description": "Arv – a hymn concert with Marianne Juvik Sæbø, with male choir and chamber orchestra or with pianist and a wind player.",
+        "page.lead": "A hymn concert that can be performed with male choir and chamber orchestra, or simply with a pianist and a wind player.",
+        "page.p1": "Arv (“Heritage”) is a hymn concert in which Marianne brings out the hymns we have inherited. The programme can be adapted to the venue and the occasion – from full forces with male choir and chamber orchestra to an intimate, simple version with pianist and a wind player.",
+        "page.p2": "Arv has also been released as an album.",
+        "page.typeValue": "Hymn concert",
+        "page.opt1.title": "Full line-up",
+        "page.opt1.p": "Soloist, male choir and chamber orchestra.",
+        "page.opt2.title": "Small line-up",
+        "page.opt2.p": "Soloist, pianist and a wind player.",
+        "page.book": "Book Arv"
+      },
+      "de": {
+        "meta.title": "Arv | Marianne Juvik Sæbø",
+        "meta.description": "Arv – ein Choralkonzert mit Marianne Juvik Sæbø, mit Männerchor und Kammerorchester oder mit Pianist und einem Bläser.",
+        "page.lead": "Ein Choralkonzert, das mit Männerchor und Kammerorchester oder ganz einfach mit einem Pianisten und einem Bläser aufgeführt werden kann.",
+        "page.p1": "Arv („Erbe“) ist ein Choralkonzert, in dem Marianne die Kirchenlieder in den Mittelpunkt stellt, die wir geerbt haben. Das Programm lässt sich an Raum und Anlass anpassen – von der vollen Besetzung mit Männerchor und Kammerorchester bis zu einer intimen, schlichten Fassung mit Pianist und einem Bläser.",
+        "page.p2": "Arv ist auch als Album erschienen.",
+        "page.typeValue": "Choralkonzert",
+        "page.opt1.title": "Große Besetzung",
+        "page.opt1.p": "Solistin, Männerchor und Kammerorchester.",
+        "page.opt2.title": "Kleine Besetzung",
+        "page.opt2.p": "Solistin, Pianist und ein Bläser.",
+        "page.book": "Arv buchen"
+      },
+      "fr": {
+        "meta.title": "Arv | Marianne Juvik Sæbø",
+        "meta.description": "Arv – un concert de cantiques avec Marianne Juvik Sæbø, avec chœur d'hommes et orchestre de chambre ou avec pianiste et un instrument à vent.",
+        "page.lead": "Un concert de cantiques qui peut être donné avec chœur d'hommes et orchestre de chambre, ou simplement avec un pianiste et un instrument à vent.",
+        "page.p1": "Arv (« Héritage ») est un concert de cantiques dans lequel Marianne met en valeur les cantiques dont nous avons hérité. Le programme s'adapte au lieu et à l'occasion – de la grande formation avec chœur d'hommes et orchestre de chambre à une version intime et dépouillée avec pianiste et un instrument à vent.",
+        "page.p2": "Arv est également paru en album.",
+        "page.typeValue": "Concert de cantiques",
+        "page.opt1.title": "Grande formation",
+        "page.opt1.p": "Soliste, chœur d'hommes et orchestre de chambre.",
+        "page.opt2.title": "Petite formation",
+        "page.opt2.p": "Soliste, pianiste et un instrument à vent.",
+        "page.book": "Réserver Arv"
+      },
+      "es": {
+        "meta.title": "Arv | Marianne Juvik Sæbø",
+        "meta.description": "Arv – un concierto de himnos con Marianne Juvik Sæbø, con coro masculino y orquesta de cámara o con pianista y un instrumento de viento.",
+        "page.lead": "Un concierto de himnos que puede hacerse con coro masculino y orquesta de cámara, o simplemente con un pianista y un instrumento de viento.",
+        "page.p1": "Arv («Herencia») es un concierto de himnos en el que Marianne da protagonismo a los himnos que hemos heredado. El programa se adapta al espacio y a la ocasión: desde la formación completa con coro masculino y orquesta de cámara hasta una versión íntima y sencilla con pianista y un instrumento de viento.",
+        "page.p2": "Arv también se ha publicado como álbum.",
+        "page.typeValue": "Concierto de himnos",
+        "page.opt1.title": "Formación grande",
+        "page.opt1.p": "Solista, coro masculino y orquesta de cámara.",
+        "page.opt2.title": "Formación pequeña",
+        "page.opt2.p": "Solista, pianista y un instrumento de viento.",
+        "page.book": "Contratar Arv"
+      }
+    }
+  };
+  var page = pages[document.documentElement.getAttribute("data-page")] || {};
+  var strings = {};
+  Object.keys(shared).forEach(function (lang) {
+    var merged = {};
+    [shared[lang], page[lang] || {}].forEach(function (source) {
+      Object.keys(source).forEach(function (key) {
+        merged[key] = source[key];
+      });
+    });
+    strings[lang] = merged;
+  });
+  window.SITE_I18N = { defaultLanguage: "no", strings: strings };
+})();

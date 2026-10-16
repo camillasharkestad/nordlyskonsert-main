@@ -1821,3 +1821,97 @@ gap: 18px;
 border-radius: 18px;
 }
 }
+
+/* ---------- PC: oppsett som på Om Marianne ----------
+   Tittelen står oppå nordlysbildet til venstre for Marianne,
+   og menyen er en midtstilt pille. Mobil beholder oppsettet over. */
+
+@media (min-width: 901px) {
+.hero {
+background:
+linear-gradient(to right, rgba(8, 10, 30, 0.78) 0%, rgba(8, 10, 30, 0.5) 34%, rgba(8, 10, 30, 0) 62%),
+var(--hero-img);
+background-size: cover;
+background-position: 72% center;
+}
+
+.hero-panel {
+width: 52%;
+min-width: 0;
+max-width: 680px;
+padding: 130px 40px 70px clamp(40px, 7vw, 130px);
+background: none;
+box-shadow: none;
+backdrop-filter: none;
+-webkit-backdrop-filter: none;
+}
+
+.hero-description {
+max-width: 440px;
+}
+}
+
+@media (min-width: 1101px) {
+.site-header {
+justify-content: center;
+padding: 24px clamp(22px, 4vw, 64px);
+}
+
+.brand {
+display: none;
+}
+
+.nav {
+position: static;
+gap: clamp(16px, 1.9vw, 32px);
+padding: 15px clamp(24px, 2.6vw, 40px);
+border: 1px solid rgba(255, 255, 255, 0.22);
+border-radius: 999px;
+background: rgba(17, 13, 40, 0.55);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+text-shadow: none;
+pointer-events: auto;
+}
+
+.nav a {
+font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+font-size: 1.04rem;
+font-weight: 400;
+letter-spacing: 0.04em;
+opacity: 0.9;
+}
+
+/* Språkvelgeren som egen rund knapp til høyre, utenfor pillen */
+.nav .lang-switch {
+position: absolute;
+top: 50%;
+right: clamp(22px, 4vw, 64px);
+transform: translateY(-50%);
+}
+
+.nav .lang-current {
+min-height: 52px;
+padding: 0 18px;
+border: 1px solid rgba(255, 255, 255, 0.22);
+border-radius: 999px;
+background: rgba(17, 13, 40, 0.55);
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+font-size: 0.95rem;
+font-weight: 400;
+letter-spacing: 0.04em;
+}
+}
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+.nav .lang-current .lang-label,
+.nav .lang-current .lang-chevron {
+display: none;
+}
+
+.nav .lang-current {
+width: 52px;
+padding: 0;
+justify-content: center;
+}
+}
