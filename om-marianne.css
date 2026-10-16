@@ -1926,7 +1926,7 @@ footer {
   font-weight: 400;
   font-size: clamp(3rem, 6.4vw, 6.6rem);
   line-height: 1.04;
-  letter-spacing: 0.005em;
+  letter-spacing: -0.025em;
   color: #9c5c52;
   background: linear-gradient(180deg, #cf9184 0%, #b06a5f 46%, #6f4139 100%);
   -webkit-background-clip: text;
