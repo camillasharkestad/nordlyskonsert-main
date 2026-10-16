@@ -21,6 +21,7 @@
     ".story",
     ".program-card",
     ".upcoming-card",
+    ".project-row",
     ".gallery-item",
     ".album-card",
     ".video-card",

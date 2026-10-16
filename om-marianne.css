@@ -203,7 +203,7 @@ h1 {
   justify-content: center;
   min-height: 52px;
   padding: 0 24px;
-  border-radius: 999px;
+  border-radius: 0;
   border: 1px solid var(--brown);
   color: var(--brown);
   font-size: 0.78rem;
@@ -1987,13 +1987,13 @@ footer {
   }
 
   .site-nav .lang-current {
-    min-height: 52px;
-    padding: 0 18px;
+    min-height: 42px;
+    padding: 0 14px;
     border: 1px solid rgba(77, 53, 47, 0.1);
     background: rgba(255, 248, 243, 0.94);
     box-shadow: 0 10px 30px rgba(77, 53, 47, 0.1);
     font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.86rem;
     font-weight: 400;
     letter-spacing: 0.04em;
   }
@@ -2006,7 +2006,7 @@ footer {
   }
 
   .site-nav .lang-current {
-    width: 52px;
+    width: 42px;
     padding: 0;
     justify-content: center;
   }
@@ -2138,7 +2138,7 @@ footer {
   min-height: 36px;
   margin-top: auto;
   padding: 0 20px;
-  border-radius: 999px;
+  border-radius: 0;
   background: var(--brown);
   color: var(--white);
   font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
@@ -2270,4 +2270,163 @@ footer {
   background: #f3e6da;
   border-top: 1px solid rgba(77, 53, 47, 0.08);
   border-bottom: 1px solid rgba(77, 53, 47, 0.08);
+}
+
+
+/* ---------- Prosjekter: egen side med prosjektene i sikksakk ---------- */
+
+.projects-hero {
+  padding: clamp(36px, 6vw, 80px) 0 clamp(12px, 2vw, 24px);
+}
+
+.projects-hero .section-head {
+  margin-bottom: 0;
+}
+
+.projects-hero h1 {
+  max-width: none;
+  margin: 0 auto;
+  font-size: clamp(3rem, 7vw, 6rem);
+  letter-spacing: -0.06em;
+}
+
+.projects {
+  padding: clamp(40px, 6vw, 80px) 0 clamp(64px, 9vw, 120px);
+}
+
+.project-list {
+  display: grid;
+  gap: clamp(56px, 8vw, 110px);
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  width: min(100%, 980px);
+  justify-self: start;
+  color: inherit;
+}
+
+/* Sikksakk: annenhver rad har bildet til høyre og er skjøvet mot høyre kant */
+.project-row:nth-child(even) {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  justify-self: end;
+}
+
+.project-row:nth-child(even) .project-media {
+  order: 2;
+}
+
+.project-media {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #f3dfd5;
+  box-shadow: 0 18px 44px rgba(77, 53, 47, 0.12);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-number {
+  font-family: "Cinzel Decorative", Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: var(--rose-light);
+}
+
+.project-meta {
+  color: var(--rose);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.project-title {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.project-text {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.project-more {
+  margin-top: 6px;
+  color: var(--rose);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.project-more::after {
+  content: " →";
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.project-row:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 8px;
+}
+
+@media (hover: hover) {
+  .project-row:hover .project-media {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(77, 53, 47, 0.2);
+  }
+
+  .project-row:hover .project-media img {
+    transform: scale(1.06);
+  }
+
+  .project-row:hover .project-title {
+    color: var(--rose);
+  }
+
+  .project-row:hover .project-more::after {
+    transform: translateX(6px);
+  }
+}
+
+@media (max-width: 760px) {
+  .project-row,
+  .project-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .project-row:nth-child(even) .project-media {
+    order: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-media,
+  .project-media img,
+  .project-title,
+  .project-more::after {
+    transition: none;
+  }
 }
