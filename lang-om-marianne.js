@@ -4,7 +4,7 @@ window.SITE_I18N = {
   defaultLanguage: "no",
   strings: {
     en: {
-      "meta.title": "About Marianne Juvik Sæbø | Singer and soloist",
+      "meta.title": "Marianne Juvik Sæbø | Singer and soloist",
       "meta.description": "About Marianne Juvik Sæbø – singer, soloist and performer. Book Marianne for concerts, ceremonies, weddings, memorial services, festivals and formal events.",
       "menu.label": "Open and close menu",
       "nav.about": "About Marianne",
@@ -153,11 +153,12 @@ window.SITE_I18N = {
       "intro.p1": "Marianne Juvik Sæbø is an experienced soprano and soloist from Askøy, trained at the Grieg Academy and the Royal Academy of Music in London. With a warm, carrying voice and a repertoire spanning classical music, hymns and folk songs to jazz, musical theatre, gospel and opera, she creates moments audiences remember.",
       "intro.p2": "Marianne can be booked for concerts, church ceremonies, weddings, funerals, memorial services, festivals and private events – alone, with a pianist, or together with choir and orchestra. She works closely with each client to choose music that suits the occasion, whether the mood should be solemn, comforting, bright or grand.",
       "intro.cta1": "Book Marianne",
+      "intro.cta2": "Read more about Marianne",
       "aktuelt.kicker": "Now"
     },
 
     de: {
-      "meta.title": "Über Marianne Juvik Sæbø | Sängerin und Solistin",
+      "meta.title": "Marianne Juvik Sæbø | Sängerin und Solistin",
       "meta.description": "Über Marianne Juvik Sæbø – Sängerin, Solistin und Interpretin. Buchen Sie Marianne für Konzerte, Zeremonien, Hochzeiten, Gedenkfeiern, Festivals und feierliche Anlässe.",
       "menu.label": "Menü öffnen und schließen",
       "nav.about": "Über Marianne",
@@ -306,11 +307,12 @@ window.SITE_I18N = {
       "intro.p1": "Marianne Juvik Sæbø ist eine erfahrene Sopranistin und Solistin aus Askøy, ausgebildet an der Grieg-Akademie und der Royal Academy of Music in London. Mit einer warmen, tragenden Stimme und einem Repertoire von Klassik, Kirchenliedern und Volksweisen bis zu Jazz, Musical, Gospel und Oper schafft sie Momente, an die sich das Publikum erinnert.",
       "intro.p2": "Marianne kann für Konzerte, kirchliche Zeremonien, Hochzeiten, Trauerfeiern, Gedenkfeiern, Festivals und private Veranstaltungen gebucht werden – allein, mit Pianist oder zusammen mit Chor und Orchester. Sie wählt gemeinsam mit jedem Auftraggeber Musik, die zum Anlass passt – ob feierlich, tröstend, hell oder großartig.",
       "intro.cta1": "Marianne buchen",
+      "intro.cta2": "Mehr über Marianne",
       "aktuelt.kicker": "Aktuell"
     },
 
     fr: {
-      "meta.title": "À propos de Marianne Juvik Sæbø | Chanteuse et soliste",
+      "meta.title": "Marianne Juvik Sæbø | Chanteuse et soliste",
       "meta.description": "À propos de Marianne Juvik Sæbø – chanteuse, soliste et interprète. Réservez Marianne pour des concerts, cérémonies, mariages, commémorations, festivals et événements solennels.",
       "menu.label": "Ouvrir et fermer le menu",
       "nav.about": "À propos de Marianne",
@@ -459,11 +461,12 @@ window.SITE_I18N = {
       "intro.p1": "Marianne Juvik Sæbø est une soprano et soliste expérimentée d'Askøy, formée à l'Académie Grieg et à la Royal Academy of Music de Londres. Avec une voix chaleureuse et porteuse et un répertoire allant de la musique classique, des cantiques et des chants traditionnels au jazz, à la comédie musicale, au gospel et à l'opéra, elle crée des moments dont le public se souvient.",
       "intro.p2": "Marianne peut être engagée pour des concerts, cérémonies religieuses, mariages, obsèques, commémorations, festivals et événements privés – seule, avec pianiste, ou avec chœur et orchestre. Elle travaille en étroite collaboration avec chaque client pour choisir une musique adaptée à l'occasion, que l'atmosphère soit solennelle, réconfortante, lumineuse ou grandiose.",
       "intro.cta1": "Réserver Marianne",
+      "intro.cta2": "En savoir plus sur Marianne",
       "aktuelt.kicker": "Actualité"
     },
 
     es: {
-      "meta.title": "Sobre Marianne Juvik Sæbø | Cantante y solista",
+      "meta.title": "Marianne Juvik Sæbø | Cantante y solista",
       "meta.description": "Sobre Marianne Juvik Sæbø: cantante, solista e intérprete. Contrata a Marianne para conciertos, ceremonias, bodas, homenajes, festivales y actos solemnes.",
       "menu.label": "Abrir y cerrar el menú",
       "nav.about": "Sobre Marianne",
@@ -612,6 +615,7 @@ window.SITE_I18N = {
       "intro.p1": "Marianne Juvik Sæbø es una soprano y solista experimentada de Askøy, formada en la Academia Grieg y en la Royal Academy of Music de Londres. Con una voz cálida y envolvente y un repertorio que abarca desde la música clásica, los himnos y las canciones populares hasta el jazz, el musical, el gospel y la ópera, crea momentos que el público recuerda.",
       "intro.p2": "Marianne puede contratarse para conciertos, ceremonias religiosas, bodas, funerales, homenajes, festivales y eventos privados: sola, con pianista o junto a coro y orquesta. Trabaja estrechamente con cada cliente para elegir la música adecuada a la ocasión, ya sea solemne, reconfortante, luminosa o grandiosa.",
       "intro.cta1": "Contratar a Marianne",
+      "intro.cta2": "Más sobre Marianne",
       "aktuelt.kicker": "Ahora"
     }
   }
