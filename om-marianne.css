@@ -2262,3 +2262,12 @@ footer {
     animation: none;
   }
 }
+
+/* ---------- Aktuelt: eget beige bånd mellom Om Marianne og historien ---------- */
+
+.aktuelt {
+  padding: clamp(52px, 7vw, 90px) 0 clamp(56px, 7vw, 96px);
+  background: #f3e6da;
+  border-top: 1px solid rgba(77, 53, 47, 0.08);
+  border-bottom: 1px solid rgba(77, 53, 47, 0.08);
+}
